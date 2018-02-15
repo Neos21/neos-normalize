@@ -1,0 +1,28 @@
+{
+  "name": "@neos21/neos-normalize",
+  "version": "1.0.0",
+  "description": "Neo's Normalize",
+  "main": "neos-normalize.css",
+  "style": "neos-normalize.css",
+  "files": [
+    "neos-normalize.css",
+    "neos-normalize.min.css",
+    "LICENSE.md"
+  ],
+  "scripts": {
+    "minify": "cleancss -o neos-normalize.min.css neos-normalize.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Neos21GitHub/neos-normalize.git"
+  },
+  "author": "Neo <neos21@gmail.com> (http://neo.s21.xrea.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Neos21GitHub/neos-normalize/issues"
+  },
+  "homepage": "https://github.com/Neos21GitHub/neos-normalize#readme",
+  "devDependencies": {
+    "clean-css-cli": "4.1.10"
+  }
+}
