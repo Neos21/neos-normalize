@@ -37,6 +37,16 @@
   top: 0;
   right: 0;
   text-align: right;
+  line-height: 1;
+}
+
+#aside input {
+  margin-bottom: 4px;
+  border: 1px solid #c7cbcf;
+  border-radius: 4px;
+  padding: 4px 8px;
+  font: 100%/1 monospace;
+  background-color: #fff;
 }
 
 #footer {
@@ -50,18 +60,26 @@
 
 document.addEventListener('DOMContentLoaded', () => {
   const link = document.getElementsByTagName('link')[0];
-  // Neo's Normalize をページに適用させる・させないの切替
+  const toggleBtn = document.getElementById('toggle');
+  const switchBtn = document.getElementById('switch');
   let isEnabled = true;
-  document.getElementById('toggle').addEventListener('click', () => {
-    link.href = isEnabled ? '' : 'neos-normalize.css';
+  let isBeautifyVer = true;
+  
+  // Neo's Normalize をページに適用させる・させないの切替
+  toggleBtn.addEventListener('click', () => {
+    link.href = isEnabled ? '' : isBeautifyVer ? 'neos-normalize.css' : 'neos-normalize.min.css';
     isEnabled = !isEnabled;
+    toggleBtn.value = '[' + (isEnabled ? 'ON' : 'OFF') + '] Toggle Neo\'s Normalize';
+    switchBtn.value = (isEnabled ? ('[' + (isBeautifyVer ? 'Beautify' : 'Minify') + '] ') : '') + 'Switch Neo\'s Normalize';
   });
   
   // 圧縮版と切り替えて差異が出ていないか検証する
-  let isBeautifyVer = true;
-  document.getElementById('switch').addEventListener('click', () => {
+  switchBtn.addEventListener('click', () => {
     link.href = isBeautifyVer ? 'neos-normalize.min.css' : 'neos-normalize.css';
+    isEnabled = true;
     isBeautifyVer = !isBeautifyVer;
+    toggleBtn.value = '[ON] Toggle Neo\'s Normalize';
+    switchBtn.value = '[' + (isBeautifyVer ? 'Beautify' : 'Minify') + '] Switch Neo\'s Normalize';
   });
 });
 
@@ -72,13 +90,14 @@ document.addEventListener('DOMContentLoaded', () => {
       <a href="https://github.com/Neos21GitHub/neos-normalize">Neo's Normalize</a>
     </header>
     <aside id="aside">
-      <input type="button" id="toggle" value="Toggle Neo's Normalize"><br>
-      <input type="button" id="switch" value="Switch Beautify / Minify">
+      <input type="button" id="toggle" value="[ON] Toggle Neo's Normalize"><br>
+      <input type="button" id="switch" value="[Beautify] Switch Neo's Normalize">
     </aside>
     <main id="main">
       <section id="main-section">
         <h1>Neo's Normalize : @neos21/neos-normalize</h1>
         <p>Normalize.css・Bootstrap 4 Reboot の思想を基に、Windows・Mac・iOS の最新ブラウザで必要最小限のノーマライズスタイルを策定する。全ての要素に対するスタイリングを完璧に統一するのではなく、使用頻度の高い要素に限り最低限のスタイリングを行う。</p>
+        <p><a href="https://www.npmjs.com/package/@neos21/neos-normalize"><img src="https://img.shields.io/npm/v/@neos21/neos-normalize.svg" alt="NPM Version" title="NPM Version"></a></p>
         <p>本サンプルページはヘッダとフッタをスタイリングし、メイン部分に <code>margin</code> を設定している程度で、それ以外は Neo's Normalize が適用されている。</p>
         <section id="supports">
           <h2>検証ブラウザ (2018-02-15 時点)</h2>
@@ -482,13 +501,20 @@ document.addEventListener('DOMContentLoaded', () => {
           <h2>Author</h2>
           <p><a href="http://neo.s21.xrea.com/">Neo</a> (<a href="https://twitter.com/Neos21">@Neos21</a>)</p>
           <ul>
+            <li><a href="https://github.com/Neos21GitHub/neos-normalize">GitHub - neos-normalize</a></li>
+            <li><a href="https://neos21github.github.io/neos-normalize/">GitHub Pages - neos-normalize</a></li>
+            <li><a href="https://www.npmjs.com/package/@neos21/neos-normalize">npm - @neos21/neos-normalize</a></li>
+          </ul>
+        </section>
+        <section>
+          <h2>Links</h2>
+          <ul>
             <li><a href="http://neo.s21.xrea.com/">Neo's World</a></li>
             <li><a href="http://neos21.hatenablog.com/">Corredor</a></li>
             <li><a href="http://neos21.hatenablog.jp/">Murga</a></li>
             <li><a href="http://neos21.hateblo.jp/">El Mylar</a></li>
             <li><a href="http://bit-archer.hatenablog.com/">Bit-Archer</a></li>
             <li><a href="https://github.com/Neos21GitHub">GitHub - Neos21GitHub</a></li>
-            <li><a href="https://github.com/Neos21GitHub/neos-normalize">GitHub - Neos21GitHub - neos-normalize</a></li>
           </ul>
         </section>
       </section>
