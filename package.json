@@ -4,11 +4,6 @@
   "description": "Neo's Normalize",
   "main": "neos-normalize.css",
   "style": "neos-normalize.css",
-  "files": [
-    "neos-normalize.css",
-    "neos-normalize.min.css",
-    "LICENSE.md"
-  ],
   "scripts": {
     "minify": "cleancss -o neos-normalize.min.css neos-normalize.css"
   },
