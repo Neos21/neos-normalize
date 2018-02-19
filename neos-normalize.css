@@ -1,16 +1,9 @@
-/*! Neo's Normalize v1.0.0 : Neo (@Neos21) http://neo.s21.xrea.com/ */
+/*! Neo's Normalize v1.0.1 : Neo (@Neos21) http://neo.s21.xrea.com/ */
 
 
 /* ==================================================
  * ページ全体
  * ================================================== */
-
-/* 全ての要素のボックスサイズの計算方法を border-box にする */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
 
 /* Windows 用 Medium 指定の游ゴシック */
 @font-face {
@@ -25,9 +18,26 @@
   font-weight: bold;
 }
 
+/* 変数定義 */
+:root {
+  --nn-grey-bg     : #f2f4f6;
+  --nn-grey-border : #d2d4d6;
+  --nn-green-bg    : #ddffee;
+  --nn-green-border: #00ddaa;
+  --nn-sans-serif: -apple-system, BlinkMacSystemFont, "游ゴシック体", YuGothic, "Yu Gothic M", "游ゴシック Medium", "Yu Gothic Medium", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN W3", HiraKakuProN-W3, "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;  /* 英字フォントを挟まず和英混在フォントのみを使用する */
+  --nn-monospace : MeiryoKe_Gothic, "Ricty Diminished", "Osaka－等幅", "Osaka-等幅", Osaka-mono, "ＭＳ ゴシック", "MS Gothic", "Courier New", Courier, Monaco, Menlo, Consolas, "Lucida Console", monospace;
+}
+
+/* 全ての要素のボックスサイズの計算方法を border-box にする */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 /* ページ全体のスタイル設定 */
 html {
-  font-family: -apple-system, BlinkMacSystemFont, "游ゴシック体", YuGothic, "Yu Gothic M", "游ゴシック Medium", "Yu Gothic Medium", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN W3", HiraKakuProN-W3, "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;  /* 英字フォントを挟まず和英混在フォントのみを使用する */
+  font-family: var(--nn-sans-serif);
   overflow-y: scroll;  /* 常に縦スクロールバーを表示する */
   cursor: default;
   -webkit-text-size-adjust: 100%;  /* iOS でフォントサイズの調整を避ける */
@@ -40,10 +50,11 @@ body {
   margin: 0;
   line-height: 1.7;
   overflow-wrap: break-word;
+  word-wrap: break-word;  /* overflow-wrap が IE で効かないため指定する */
 }
 
 /* IE11 でブロック要素として扱われない要素を設定しておく */
-main {
+details, main {
   display: block;
 }
 
@@ -110,7 +121,12 @@ address, dfn, em, var {
 
 /* 等幅フォントにする */
 pre, code, kbd, samp, var, textarea {
-  font-family: MeiryoKe_Gothic, "Ricty Diminished", "Osaka－等幅", "Osaka-等幅", Osaka-mono, "ＭＳ ゴシック", "MS Gothic", "Courier New", Courier, Monaco, Menlo, Consolas, "Lucida Console", monospace;
+  font-family: var(--nn-monospace);
+}
+
+/* IE11 でフォントサイズが小さくなるのを直す */
+code, kbd, samp, var {
+  font-size: 1em;
 }
 
 /* フォーム部品のフォントは親要素から継承させる */
@@ -139,9 +155,27 @@ sup { top: -.5em; }
  * 個別スタイル設定
  * ================================================== */
 
+/* 引用ブロック */
+blockquote {
+  border: 1px solid var(--nn-green-border);
+  border-radius: 4px;
+  padding: 1em;
+  background: var(--nn-green-bg);
+}
+
 /* 等幅ブロック */
 pre {
+  border: 1px solid var(--nn-grey-border);
+  border-radius: 4px;
+  padding: 1em;
+  background: var(--nn-grey-bg);
   overflow: auto;
+}
+
+/* 親ブロックのパディングとの衝突回避 */
+blockquote > :last-child,
+pre > :last-child {
+  margin-bottom: 0;
 }
 
 /* テーブル */
@@ -151,25 +185,32 @@ table {
 
 /* テーブルセル */
 td, th {
-  border: 1px solid #c7cbcf;
+  border: 1px solid var(--nn-grey-border);
   padding: .25em .5em;
 }
 
 /* テーブル見出し */
 th {
   text-align: center;
-  background-color: #ebedee;
+  background: var(--nn-grey-bg);
 }
 
 /* 水平線 */
 hr {
   border: 0;
-  border-bottom: 1px solid #c7cbcf;
+  border-bottom: 1px solid var(--nn-grey-border);
 }
 
 /* フォームグループ */
 fieldset {
-  border: 1px solid #c7cbcf;
+  border: 1px solid var(--nn-grey-border);
+  border-radius: 4px;
+}
+
+/* 図表 */
+figure {
+  border-left: .5em solid var(--nn-grey-border);
+  padding-left: 1em;
 }
 
 /* 要約 */
@@ -183,6 +224,19 @@ abbr[title], dfn[title] {
   text-decoration: underline dotted;
   cursor: help;
 }
+
+/* コード */
+:not(pre) > code,
+:not(pre) > samp,
+:not(pre) > kbd,
+:not(pre) > var {
+  margin: 0 .25em;
+  border: 1px solid var(--nn-grey-border);
+  border-radius: 4px;
+  padding: .1em .25em;
+  background: var(--nn-grey-bg);
+}
+
 
 /* 引用 */
 q {
@@ -204,54 +258,4 @@ img, input, select, textarea {
 /* Mac でのボタン類の表示仕様を揃える */
 button, [type="button"], [type="reset"], [type="submit"] {
   -webkit-appearance: button;
-}
-
-
-/* ==================================================
- * カスタムスタイル
- * ================================================== */
-
-/* 引用ブロック */
-blockquote {
-  border: 1px solid #0da;
-  border-radius: 4px;
-  padding: 1em;
-  background-color: #dfe;
-}
-
-/* 等幅ブロック */
-pre {
-  border: 1px solid #c7cbcf;
-  border-radius: 4px;
-  padding: 1em;
-  background-color: #ebedee;
-}
-
-/* 親ブロックのパディングとの衝突回避 */
-blockquote > :last-child,
-pre > :last-child {
-  margin-bottom: 0;
-}
-
-/* フォームグループ */
-fieldset {
-  border-radius: 4px;
-}
-
-/* 図表 */
-figure {
-  border-left: .5em solid #c7cbcf;
-  padding-left: 1em;
-}
-
-/* コード */
-:not(pre) > code,
-:not(pre) > var,
-:not(pre) > samp,
-:not(pre) > kbd {
-  margin: 0 .25em;
-  border: 1px solid #c7cbcf;
-  border-radius: 4px;
-  padding: .1em .25em;
-  background-color: #ebedee;
 }
