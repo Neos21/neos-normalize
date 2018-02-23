@@ -1,4 +1,4 @@
-/*! Neo's Normalize v1.0.1 : Neo (@Neos21) http://neo.s21.xrea.com/ */
+/*! Neo's Normalize v1.0.2 : Neo (@Neos21) http://neo.s21.xrea.com/ */
 
 
 /* ==================================================
@@ -37,12 +37,13 @@
 
 /* ページ全体のスタイル設定 */
 html {
-  font-family: var(--nn-sans-serif);
+  font-family: -apple-system, BlinkMacSystemFont, "游ゴシック体", YuGothic, "Yu Gothic M", "游ゴシック Medium", "Yu Gothic Medium", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN W3", HiraKakuProN-W3, "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;  /* var(--nn-sans-serif) */
   overflow-y: scroll;  /* 常に縦スクロールバーを表示する */
   cursor: default;
+  text-decoration-skip-ink: none;  /* Chrome で下線部の文字切れを調整する */
   -webkit-text-size-adjust: 100%;  /* iOS でフォントサイズの調整を避ける */
   -webkit-text-decoration-skip: objects;  /* iOS で下線部の文字切れを調整する */
-  -webkit-overflow-scrolling: touch;  /* 慣性スクロール */
+  -webkit-overflow-scrolling: touch;  /* iOS で慣性スクロールを有効にする */
 }
 
 /* ページの基準となるスタイルを設定する */
@@ -71,25 +72,23 @@ address, details, figcaption, fieldset, form, pre, summary, table {
   margin-bottom: 1rem;
 }
 
-/* 入れ子のリストは下マージンをなくす */
+/* 下マージンをなくす : 入れ子のリスト・子要素のマージンと親要素のパディングとの衝突回避 */
 ol ol, ol ul,
-ul ol, ul ul {
+ul ol, ul ul,
+blockquote > :last-child,
+fieldset > :last-child,
+pre > :last-child {
   margin-bottom: 0;
 }
 
 /* 左マージンを付ける */
 dd, li {
-  margin-left: 3em;
+  margin-left: 2.5em;
 }
 
 /* 引用ブロック・図表はまとめて調整する */
 blockquote, figure {
-  margin: 0 0 1rem 3em;
-}
-
-/* フォームグループ内の余白を調整する */
-fieldset > :last-child {
-  margin-bottom: 0;
+  margin: 0 0 1rem 2.5em;
 }
 
 /* リストの左パディングをなくす */
@@ -121,7 +120,7 @@ address, dfn, em, var {
 
 /* 等幅フォントにする */
 pre, code, kbd, samp, var, textarea {
-  font-family: var(--nn-monospace);
+  font-family: MeiryoKe_Gothic, "Ricty Diminished", "Osaka－等幅", "Osaka-等幅", Osaka-mono, "ＭＳ ゴシック", "MS Gothic", "Courier New", Courier, Monaco, Menlo, Consolas, "Lucida Console", monospace;  /* var(--nn-monospace) */
 }
 
 /* IE11 でフォントサイズが小さくなるのを直す */
@@ -157,25 +156,23 @@ sup { top: -.5em; }
 
 /* 引用ブロック */
 blockquote {
-  border: 1px solid var(--nn-green-border);
+  border: 1px solid #00ddaa;  /* var(--nn-green-border) */
   border-radius: 4px;
   padding: 1em;
-  background: var(--nn-green-bg);
+  background: #ddffee;  /* var(--nn-green-bg) */
 }
 
 /* 等幅ブロック */
 pre {
-  border: 1px solid var(--nn-grey-border);
+  border: 1px solid #d2d4d6;  /* var(--nn-grey-border) */
   border-radius: 4px;
   padding: 1em;
-  background: var(--nn-grey-bg);
+  background: #f2f4f6;  /* var(--nn-grey-bg) */
   overflow: auto;
-}
-
-/* 親ブロックのパディングとの衝突回避 */
-blockquote > :last-child,
-pre > :last-child {
-  margin-bottom: 0;
+  overflow-wrap: normal;
+  word-wrap: normal;  /* IE・Edge 向け */
+  word-break: keep-all;
+  white-space: pre;
 }
 
 /* テーブル */
@@ -185,31 +182,31 @@ table {
 
 /* テーブルセル */
 td, th {
-  border: 1px solid var(--nn-grey-border);
+  border: 1px solid #d2d4d6;  /* var(--nn-grey-border) */
   padding: .25em .5em;
 }
 
 /* テーブル見出し */
 th {
   text-align: center;
-  background: var(--nn-grey-bg);
+  background: #f2f4f6;  /* var(--nn-grey-bg) */
 }
 
 /* 水平線 */
 hr {
   border: 0;
-  border-bottom: 1px solid var(--nn-grey-border);
+  border-bottom: 1px solid #d2d4d6;  /* var(--nn-grey-border) */
 }
 
 /* フォームグループ */
 fieldset {
-  border: 1px solid var(--nn-grey-border);
+  border: 1px solid #d2d4d6;  /* var(--nn-grey-border) */
   border-radius: 4px;
 }
 
 /* 図表 */
 figure {
-  border-left: .5em solid var(--nn-grey-border);
+  border-left: .5em solid #d2d4d6;  /* var(--nn-grey-border) */
   padding-left: 1em;
 }
 
@@ -231,12 +228,11 @@ abbr[title], dfn[title] {
 :not(pre) > kbd,
 :not(pre) > var {
   margin: 0 .25em;
-  border: 1px solid var(--nn-grey-border);
+  border: 1px solid #d2d4d6;  /* var(--nn-grey-border) */
   border-radius: 4px;
   padding: .1em .25em;
-  background: var(--nn-grey-bg);
+  background: #f2f4f6;  /* var(--nn-grey-bg) */
 }
-
 
 /* 引用 */
 q {
@@ -246,7 +242,7 @@ q::before { content: open-quote; }
 q::after { content: close-quote; }
 
 /* 隣接するテキストを上揃えにする */
-img, input, select, textarea {
+input, select, textarea {
   vertical-align: top;
 }
 

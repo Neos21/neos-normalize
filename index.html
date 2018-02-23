@@ -46,7 +46,7 @@
   border-radius: 4px;
   padding: 4px 8px;
   font: 100%/1 monospace;
-  background-color: #fff;
+  background: #ffffff;
 }
 
 #footer {
@@ -58,7 +58,7 @@
     </style>
     <script>
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', function() {
   const link = document.getElementsByTagName('link')[0];
   const toggleBtn = document.getElementById('toggle');
   const switchBtn = document.getElementById('switch');
@@ -66,7 +66,7 @@ document.addEventListener('DOMContentLoaded', () => {
   let isBeautifyVer = true;
   
   // Neo's Normalize をページに適用させる・させないの切替
-  toggleBtn.addEventListener('click', () => {
+  toggleBtn.addEventListener('click', function() {
     link.href = isEnabled ? '' : isBeautifyVer ? 'neos-normalize.css' : 'neos-normalize.min.css';
     isEnabled = !isEnabled;
     toggleBtn.value = '[' + (isEnabled ? 'ON' : 'OFF') + '] Toggle Neo\'s Normalize';
@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
   
   // 圧縮版と切り替えて差異が出ていないか検証する
-  switchBtn.addEventListener('click', () => {
+  switchBtn.addEventListener('click', function() {
     link.href = isBeautifyVer ? 'neos-normalize.min.css' : 'neos-normalize.css';
     isEnabled = true;
     isBeautifyVer = !isBeautifyVer;
@@ -205,8 +205,10 @@ document.addEventListener('DOMContentLoaded', () => {
         <section id="block">
           <h2>Block Elements</h2>
           <p>Paragraph</p>
-          <pre>Pre</pre>
-          <pre><code>Pre Code</code></pre>
+          <pre>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</pre>
+          <pre><code>lorem ipsum (ロレム・イプサム、略してリプサム lipsum ともいう) とは、出版、ウェブデザイン、グラフィックデザインなどの諸分野において使用されている典型的なダミーテキスト。書籍やウェブページや広告などのデザインのプロトタイプを制作したり顧客にプレゼンテーションしたりする際に、まだ正式な文章の出来上がっていないテキスト部分の書体 (フォント)、タイポグラフィ、レイアウトなどといった視覚的なデザインを調整したりわかりやすく見せるために用いられる。
+
+lorem ipsum (ロレム・イプサム、略してリプサム lipsum ともいう) とは、出版、ウェブデザイン、グラフィックデザインなどの諸分野において使用されている典型的なダミーテキスト。書籍やウェブページや広告などのデザインのプロトタイプを制作したり顧客にプレゼンテーションしたりする際に、まだ正式な文章の出来上がっていないテキスト部分の書体 (フォント)、タイポグラフィ、レイアウトなどといった視覚的なデザインを調整したりわかりやすく見せるために用いられる。</code></pre>
           <blockquote>
             <p>Blockquote</p>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
@@ -520,7 +522,7 @@ document.addEventListener('DOMContentLoaded', () => {
       </section>
     </main>
     <footer id="footer">
-      <small>Copyright &copy; 2018 <a href="http://neo.s21.xrea.com/">Neo</a>, All rights reserved.</small></div>
+      <small>Copyright &copy; 2018 <a href="http://neo.s21.xrea.com/">Neo</a>, All rights reserved.</small>
     </footer>
   </body>
 </html>
