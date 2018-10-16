@@ -1,9 +1,10 @@
 {
   "name": "@neos21/neos-normalize",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Neo's Normalize",
   "main": "neos-normalize.css",
   "style": "neos-normalize.css",
+  "sass": "neos-normalize.scss",
   "scripts": {
     "minify": "cleancss -o neos-normalize.min.css neos-normalize.css"
   },
