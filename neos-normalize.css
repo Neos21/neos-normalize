@@ -1,4 +1,4 @@
-/*! Neo's Normalize v1.0.4 : Neo (@Neos21) http://neo.s21.xrea.com/ */
+/*! Neo's Normalize v1.0.5 : Neo (@Neos21) http://neo.s21.xrea.com/ */
 
 
 /* ==================================================
@@ -20,12 +20,13 @@
 
 /* 変数定義 */
 :root {
-  --nn-grey-bg     : #f2f4f6;
-  --nn-grey-border : #d2d4d6;
-  --nn-green-bg    : #ddffee;
+  --nn-grey-bg: #f2f4f6;
+  --nn-grey-border: #d2d4d6;
+  --nn-green-bg: #ddffee;
   --nn-green-border: #00ddaa;
-  --nn-sans-serif: -apple-system, BlinkMacSystemFont, "游ゴシック体", YuGothic, "Yu Gothic M", "游ゴシック Medium", "Yu Gothic Medium", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN W3", HiraKakuProN-W3, "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;  /* 英字フォントを挟まず和英混在フォントのみを使用する */
-  --nn-monospace : MeiryoKe_Gothic, "Ricty Diminished", "Osaka－等幅", "Osaka-等幅", Osaka-mono, "ＭＳ ゴシック", "MS Gothic", "Courier New", Courier, Monaco, Menlo, Consolas, "Lucida Console", monospace;
+  --nn-sans-serif: -apple-system, BlinkMacSystemFont, 游ゴシック体, YuGothic, Yu Gothic M, 游ゴシック Medium, Yu Gothic Medium, ヒラギノ角ゴ ProN W3, Hiragino Kaku Gothic ProN W3, HiraKakuProN-W3, ヒラギノ角ゴ ProN, Hiragino Kaku Gothic ProN, ヒラギノ角ゴ Pro, Hiragino Kaku Gothic Pro, メイリオ, Meiryo, Osaka, ＭＳ Ｐゴシック, MS PGothic, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  --nn-serif: 游明朝体, YuMincho, 游明朝, Yu Mincho, ヒラギノ明朝 ProN W3, Hiragino Mincho ProN W3, HiraMinProN-W3, ヒラギノ明朝 ProN, Hiragino Mincho ProN, ヒラギノ明朝 Pro, Hiragino Mincho Pro, HGS明朝E, ＭＳ Ｐ明朝, MS PMincho, Georgia, serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  --nn-monospace: MeiryoKe_Gothic, Ricty Diminished, Osaka－等幅, Osaka-等幅, Osaka-mono, ＭＳ ゴシック, MS Gothic, Courier New, Courier, Monaco, Menlo, Consolas, Lucida Console, monospace, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
 }
 
 /* 全ての要素のボックスサイズの計算方法を border-box にする */
@@ -37,13 +38,19 @@
 
 /* ページ全体のスタイル設定 */
 html {
-  font-family: -apple-system, BlinkMacSystemFont, "游ゴシック体", YuGothic, "Yu Gothic M", "游ゴシック Medium", "Yu Gothic Medium", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN W3", HiraKakuProN-W3, "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;  /* var(--nn-sans-serif) */
-  overflow-y: scroll;  /* 常に縦スクロールバーを表示する */
+  /* var(--nn-sans-serif) */
+  font-family: -apple-system, BlinkMacSystemFont, "游ゴシック体", YuGothic, "Yu Gothic M", "游ゴシック Medium", "Yu Gothic Medium", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN W3", HiraKakuProN-W3, "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  /* 常に縦スクロールバーを表示する */
+  overflow-y: scroll;
   cursor: default;
-  text-decoration-skip-ink: none;  /* Chrome で下線部の文字切れを調整する */
-  -webkit-text-size-adjust: 100%;  /* iOS でフォントサイズの調整を避ける */
-  -webkit-text-decoration-skip: objects;  /* iOS で下線部の文字切れを調整する */
-  -webkit-overflow-scrolling: touch;  /* iOS で慣性スクロールを有効にする */
+  /* Chrome で下線部の文字切れを調整する */
+  text-decoration-skip-ink: none;
+  /* iOS でフォントサイズの調整を避ける */
+  -webkit-text-size-adjust: 100%;
+  /* iOS で下線部の文字切れを調整する */
+  -webkit-text-decoration-skip: objects;
+  /* iOS で慣性スクロールを有効にする */
+  -webkit-overflow-scrolling: touch;
 }
 
 /* ページの基準となるスタイルを設定する */
@@ -51,7 +58,8 @@ body {
   margin: 0;
   line-height: 1.7;
   overflow-wrap: break-word;
-  word-wrap: break-word;  /* overflow-wrap が IE で効かないため指定する */
+  /* overflow-wrap が IE で効かないため指定する */
+  word-wrap: break-word;
 }
 
 /* IE11 でブロック要素として扱われない要素を設定しておく */
@@ -102,11 +110,25 @@ ol, ul {
  * ================================================== */
 
 /* 見出しサイズを調整する */
-h1 { font-size: 2em; }
-h2 { font-size: 1.7em; }
-h3 { font-size: 1.5em; }
-h4 { font-size: 1.2em; }
-h5, h6 { font-size: 1em; }
+h1 {
+  font-size: 2em;
+}
+
+h2 {
+  font-size: 1.7em;
+}
+
+h3 {
+  font-size: 1.5em;
+}
+
+h4 {
+  font-size: 1.2em;
+}
+
+h5, h6 {
+  font-size: 1em;
+}
 
 /* 太字にする */
 caption, dt, em, th {
@@ -120,7 +142,8 @@ address, dfn, em, var {
 
 /* 等幅フォントにする */
 pre, code, kbd, samp, var, textarea {
-  font-family: MeiryoKe_Gothic, "Ricty Diminished", "Osaka－等幅", "Osaka-等幅", Osaka-mono, "ＭＳ ゴシック", "MS Gothic", "Courier New", Courier, Monaco, Menlo, Consolas, "Lucida Console", monospace;  /* var(--nn-monospace) */
+  /* var(--nn-monospace) */
+  font-family: MeiryoKe_Gothic, "Ricty Diminished", "Osaka－等幅", "Osaka-等幅", Osaka-mono, "ＭＳ ゴシック", "MS Gothic", "Courier New", Courier, Monaco, Menlo, Consolas, "Lucida Console", monospace, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
 /* IE11 でフォントサイズが小さくなるのを直す */
@@ -130,7 +153,8 @@ code, kbd, samp, var {
 
 /* フォーム部品のフォントは親要素から継承させる */
 button, input, optgroup, select, textarea {
-  margin: 0;  /* 要素の余白をなくす */
+  /* 要素の余白をなくす */
+  margin: 0;
   font-family: inherit;
   font-size: inherit;
 }
@@ -146,8 +170,14 @@ sub, sup {
   font-size: .75em;
   vertical-align: baseline;
 }
-sub { bottom: -.25em; }
-sup { top: -.5em; }
+
+sub {
+  bottom: -.25em;
+}
+
+sup {
+  top: -.5em;
+}
 
 
 /* ==================================================
@@ -156,21 +186,26 @@ sup { top: -.5em; }
 
 /* 引用ブロック */
 blockquote {
-  border: 1px solid #00ddaa;  /* var(--nn-green-border) */
+  /* var(--nn-green-border) */
+  border: 1px solid #00ddaa;
   border-radius: 4px;
   padding: 1em;
-  background: #ddffee;  /* var(--nn-green-bg) */
+  /* var(--nn-green-bg) */
+  background: #ddffee;
 }
 
 /* 等幅ブロック */
 pre {
-  border: 1px solid #d2d4d6;  /* var(--nn-grey-border) */
+  /* var(--nn-grey-border) */
+  border: 1px solid #d2d4d6;
   border-radius: 4px;
   padding: 1em;
-  background: #f2f4f6;  /* var(--nn-grey-bg) */
+  /* var(--nn-grey-bg) */
+  background: #f2f4f6;
   overflow: auto;
   overflow-wrap: normal;
-  word-wrap: normal;  /* IE・Edge 向け */
+  /* IE・Edge 向け */
+  word-wrap: normal;
   word-break: keep-all;
   white-space: pre;
 }
@@ -182,31 +217,36 @@ table {
 
 /* テーブルセル */
 td, th {
-  border: 1px solid #d2d4d6;  /* var(--nn-grey-border) */
+  /* var(--nn-grey-border) */
+  border: 1px solid #d2d4d6;
   padding: .25em .5em;
 }
 
 /* テーブル見出し */
 th {
   text-align: center;
-  background: #f2f4f6;  /* var(--nn-grey-bg) */
+  /* var(--nn-grey-bg) */
+  background: #f2f4f6;
 }
 
 /* 水平線 */
 hr {
   border: 0;
-  border-bottom: 1px solid #d2d4d6;  /* var(--nn-grey-border) */
+  /* var(--nn-grey-border) */
+  border-bottom: 1px solid #d2d4d6;
 }
 
 /* フォームグループ */
 fieldset {
-  border: 1px solid #d2d4d6;  /* var(--nn-grey-border) */
+  /* var(--nn-grey-border) */
+  border: 1px solid #d2d4d6;
   border-radius: 4px;
 }
 
 /* 図表 */
 figure {
-  border-left: .5em solid #d2d4d6;  /* var(--nn-grey-border) */
+  /* var(--nn-grey-border) */
+  border-left: .5em solid #d2d4d6;
   padding-left: 1em;
 }
 
@@ -217,7 +257,8 @@ summary {
 
 /* 略語・定義 */
 abbr[title], dfn[title] {
-  text-decoration: underline;  /* IE・Edge 向け */
+  /* IE・Edge 向け */
+  text-decoration: underline;
   text-decoration: underline dotted;
   cursor: help;
 }
@@ -228,18 +269,26 @@ abbr[title], dfn[title] {
 :not(pre) > kbd,
 :not(pre) > var {
   margin: 0 .25em;
-  border: 1px solid #d2d4d6;  /* var(--nn-grey-border) */
+  /* var(--nn-grey-border) */
+  border: 1px solid #d2d4d6;
   border-radius: 4px;
   padding: .1em .25em;
-  background: #f2f4f6;  /* var(--nn-grey-bg) */
+  /* var(--nn-grey-bg) */
+  background: #f2f4f6;
 }
 
 /* 引用 */
 q {
-  quotes: "“"  "”"    "‘"  "’";;
+  quotes: "“"  "”"    "‘"  "’";
 }
-q::before { content: open-quote; }
-q::after { content: close-quote; }
+
+q::before {
+  content: open-quote;
+}
+
+q::after {
+  content: close-quote;
+}
 
 /* 隣接するテキストを上揃えにする */
 input, select, textarea {

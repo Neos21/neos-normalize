@@ -1,11 +1,12 @@
 {
   "name": "@neos21/neos-normalize",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Neo's Normalize",
   "main": "neos-normalize.css",
   "style": "neos-normalize.css",
   "sass": "neos-normalize.scss",
   "scripts": {
+    "transpile": "node-sass --output-style=expanded neos-normalize.scss neos-normalize.css && node neos-beautify.js",
     "minify": "cleancss -o neos-normalize.min.css neos-normalize.css"
   },
   "repository": {
@@ -19,6 +20,7 @@
   },
   "homepage": "https://github.com/Neos21/neos-normalize#readme",
   "devDependencies": {
-    "clean-css-cli": "4.1.10"
+    "clean-css-cli": "4.1.10",
+    "node-sass": "4.9.4"
   }
 }
