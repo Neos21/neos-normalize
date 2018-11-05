@@ -1,4 +1,4 @@
-/*! Neo's Normalize v1.0.5 : Neo (@Neos21) http://neo.s21.xrea.com/ */
+/*! Neo's Normalize v1.0.6 : Neo (@Neos21) http://neo.s21.xrea.com/ */
 
 
 // ==================================================
@@ -69,6 +69,7 @@ $nn-monospace   : MeiryoKe_Gothic, "Ricty Diminished", "Osaka－等幅", "Osaka-
   --nn-grey-border: #{$nn-grey-border};
   --nn-green-bg: #{$nn-green-bg};
   --nn-green-border: #{$nn-green-border};
+  // 変数展開によりダブルクォートが外れてしまうので、トランスパイル後に手修正する
   --nn-sans-serif: #{$nn-sans-serif};
   --nn-serif: #{$nn-serif};
   --nn-monospace: #{$nn-monospace};

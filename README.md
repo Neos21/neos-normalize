@@ -4,9 +4,11 @@
 
 Normalize.css・Bootstrap 4 Reboot の思想を基に、Windows・Mac・iOS の最新ブラウザで必要最小限のノーマライズスタイルを策定する。全ての要素に対するスタイリングを完璧に統一するのではなく、使用頻度の高い要素に限り最低限のスタイリングを行う。
 
+- [neos-normalize.scss](https://neos21.github.io/neos-normalize/neos-normalize.scss)
 - [neos-normalize.css](https://neos21.github.io/neos-normalize/neos-normalize.css)
+  - `neos-normalize.scss` からトランスパイルしたもの
 - [neos-normalize.min.css](https://neos21.github.io/neos-normalize/neos-normalize.min.css)
-- [neos-normalize.scss](https://neos21.github.io/neos-normalize/neos-normalize.scss) … 中身は `neos-normalize.css` と全く同じ・拡張子違い
+  - `neos-normalize.css` を Minify したもの
 
 
 ## Demo
