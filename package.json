@@ -1,6 +1,6 @@
 {
   "name": "@neos21/neos-normalize",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Neo's Normalize",
   "main": "neos-normalize.min.css",
   "style": "neos-normalize.css",
