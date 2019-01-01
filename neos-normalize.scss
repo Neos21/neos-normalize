@@ -11,45 +11,31 @@ $nn-green-bg    : #ddffee !default;
 $nn-green-border: #00ddaa !default;
 // サンセリフ (ゴシック体)
 //  1. 英字   … Mac     iOS         … -apple-system, BlinkMacSystemFont,
-//  2. 英字   … Mac                 … "Helvetica Neue",
-//  3. 英字   … Mac Win             … Helvetica,
+//  2. 英字   … Mac     iOS         … "Helvetica Neue",
+//  3. 英字   … Mac Win iOS Android … Helvetica, (= Arial on Windows, Roboto on Android)
 //  4. 和英   … Mac Win             … YuGothic, "Yu Gothic M", "Yu Gothic Medium",
-//  5. 和英   … Mac     iOS         … "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN W3", HiraKakuProN-W3, "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro",
+//  5. 和英   … Mac     iOS         … "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro"
 //  6. 和英   …     Win             … Meiryo,
 //  7. 全般   …                     … sans-serif,
 //  8. 絵文字 … Mac     iOS         … "Apple Color Emoji",
 //  9. 絵文字 …     Win             … "Segoe UI Emoji", "Segoe UI Symbol",
 // 10. 絵文字 …             Android … "Noto Color Emoji"
-// - "游ゴシック体", "游ゴシック Medium", "ヒラギノ角ゴ ProN", "ヒラギノ角ゴ Pro", "メイリオ" : 英語表記のみで良いので外した
-// - Osaka, "ＭＳ Ｐゴシック", "MS PGothic" : 古いので外した
-// - HelveticaNeue : Windows にインストールされている場合はコチラが効くが、レアケースなので外した
-// - Arial : Helvetica がエイリアスなので書かない
-// - "Segoe UI" : 文字が細くて気に入らないので Helvetica (= Arial のエイリアス) を使用するため外した
-// - Roboto : Helvetica の表記があると Roboto と解釈するらしいので書かない
-// TODO : 要調整 : "Hiragino Sans", "ヒラギノ角ゴシック", "ヒラギノ角ゴ Pro W3", "ヒラギノ角ゴシック Pro"
-$nn-sans-serif  : -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, YuGothic, "Yu Gothic M", "Yu Gothic Medium", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN W3", HiraKakuProN-W3, "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", Meiryo, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+$nn-sans-serif  : -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, YuGothic, "Yu Gothic M", "Yu Gothic Medium", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", Meiryo, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
 // セリフ (明朝体)
-//  1. 英字   … Mac Win             … Georgia,
-//  2. 英字   … Mac                 … Times,
-//  3. 英字   …     Win             … "Times New Roman",
-//  4. 和英   … Mac Win             … "游明朝体", YuMincho, "游明朝", "Yu Mincho",
-//  5. 和英   … Mac                 … "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN W3", HiraMinProN-W3, "ヒラギノ明朝 ProN", "Hiragino Mincho ProN", "ヒラギノ明朝 Pro", "Hiragino Mincho Pro",
-//  6. 和英   …     Win             … "HGS明朝E"
-//  7. 全般   …                     … serif
-// TODO : 游明朝・ヒラギノに無駄な表記がないか
-$nn-serif       : Georgia, Times, "Times New Roman", "游明朝体", YuMincho, "游明朝", "Yu Mincho", "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN W3", HiraMinProN-W3, "ヒラギノ明朝 ProN", "Hiragino Mincho ProN", "ヒラギノ明朝 Pro", "Hiragino Mincho Pro", "HGS明朝E", serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+//  1. 英字   … Mac Win iOS Android … Georgia, (= Noto Serif on Android)
+//  2. 和英   … Mac Win             … YuMincho, "Yu Mincho",
+//  3. 和英   … Mac     iOS         … "Hiragino Mincho ProN", "Hiragino Mincho Pro",
+//  4. 和英   …     Win             … "HGS明朝E"
+//  5. 全般   …                     … serif
+$nn-serif       : Georgia, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "HGS明朝E", serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
 // モノスペース (等幅)
 //  1. 和英   …     Win       [Mod] … MeiryoKe_Gothic,
 //  2. 和英   … Mac Win      [Open] … "Ricty Diminished",
-//  3. 和英   … Mac                 … "Osaka－等幅", "Osaka-等幅", Osaka-mono,
-//  4. 和英   …     Win             … "ＭＳ ゴシック", "MS Gothic",
-//  5. 英字   … Mac     iOS         … SFMono-Regular,
-//  6. 英字   …             Android … "Roboto Mono",
-//  7. 英字   … Mac Win             … "Courier New", Courier,
-//  8. 英字   … Mac                 … Monaco, Menlo,
-//  9. 英字   …     Win             … Consolas, "Lucida Console",
+//  3. 和英   … Mac                 … Osaka-mono,
+//  4. 和英   …     Win             … "MS Gothic",
+//  7. 英字   … Mac Win iOS Android … "Courier New",
 // 10. 全般   …                     … monospace
-$nn-monospace   : MeiryoKe_Gothic, "Ricty Diminished", "Osaka－等幅", "Osaka-等幅", Osaka-mono, "ＭＳ ゴシック", "MS Gothic", SFMono-Regular, "Roboto Mono", "Courier New", Courier, Monaco, Menlo, Consolas, "Lucida Console", monospace, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+$nn-monospace   : MeiryoKe_Gothic, "Ricty Diminished", Osaka-mono, "MS Gothic", "Courier New", monospace, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
 
 
 /* ==================================================
@@ -62,7 +48,7 @@ $nn-monospace   : MeiryoKe_Gothic, "Ricty Diminished", "Osaka－等幅", "Osaka-
   src: local("Yu Gothic Medium");
 }
 
-/* 太字の時は Bold 書体を使わせる */
+/* 太字の時は Bold 書体を使用する */
 @font-face {
   font-family: "Yu Gothic M";
   src: local("Yu Gothic Bold");
@@ -76,15 +62,15 @@ $nn-monospace   : MeiryoKe_Gothic, "Ricty Diminished", "Osaka－等幅", "Osaka-
   --nn-grey-border: #d2d4d6;
   --nn-green-bg: #ddffee;
   --nn-green-border: #00ddaa;
-  --nn-sans-serif: -apple-system, BlinkMacSystemFont, "游ゴシック体", YuGothic, "Yu Gothic M", "游ゴシック Medium", "Yu Gothic Medium", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN W3", HiraKakuProN-W3, "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", "Helvetica Neue", HelveticaNeue, Helvetica, Arial, "Segoe UI", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --nn-serif: "游明朝体", YuMincho, "游明朝", "Yu Mincho", "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN W3", HiraMinProN-W3, "ヒラギノ明朝 ProN", "Hiragino Mincho ProN", "ヒラギノ明朝 Pro", "Hiragino Mincho Pro", "HGS明朝E", "ＭＳ Ｐ明朝", "MS PMincho", Georgia, Times, "Times New Roman", serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --nn-monospace: MeiryoKe_Gothic, "Ricty Diminished", "Osaka－等幅", "Osaka-等幅", Osaka-mono, "ＭＳ ゴシック", "MS Gothic", SFMono-Regular, "Courier New", Courier, Monaco, Menlo, Consolas, "Lucida Console", monospace, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --nn-sans-serif: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, YuGothic, "Yu Gothic M", "Yu Gothic Medium", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", Meiryo, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --nn-serif: Georgia, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "HGS明朝E", serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --nn-monospace: MeiryoKe_Gothic, "Ricty Diminished", Osaka-mono, "MS Gothic", "Courier New", monospace, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
 /* 全ての要素のボックスサイズの計算方法を border-box にする */
 *,
-*::before,
-*::after {
+::before,
+::after {
   box-sizing: border-box;
 }
 
@@ -204,10 +190,15 @@ code, kbd, samp, var {
 }
 
 /* フォーム部品のフォントは親要素から継承させる */
-button, input, optgroup, select, textarea {
+button, input, optgroup, select {
   /* 要素の余白をなくす */
   margin: 0;
   font-family: inherit;
+  font-size: inherit;
+}
+
+textarea {
+  margin: 0;
   font-size: inherit;
 }
 
@@ -331,7 +322,7 @@ abbr[title], dfn[title] {
 
 /* 引用 */
 q {
-  quotes: "“"  "”"    "‘"  "’";
+  quotes: "“" "”" "‘" "’";
 }
 
 q::before {
