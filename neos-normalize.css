@@ -1,4 +1,4 @@
-/*! Neo's Normalize v1.0.8 : Neo (@Neos21) http://neo.s21.xrea.com/ */
+/*! Neo's Normalize v1.0.9 : Neo (@Neos21) http://neo.s21.xrea.com/ */
 
 
 /* ==================================================
@@ -25,7 +25,7 @@
   --nn-green-bg: #ddffee;
   --nn-green-border: #00ddaa;
   --nn-sans-serif: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, YuGothic, "Yu Gothic M", "Yu Gothic Medium", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", Meiryo, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --nn-serif: Georgia, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "HGS明朝E", serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --nn-serif: Georgia, YuMincho, "Yu Mincho Medium", "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "HGS明朝E", serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --nn-monospace: MeiryoKe_Gothic, "Ricty Diminished", Osaka-mono, "MS Gothic", "Courier New", monospace, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
