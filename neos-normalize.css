@@ -1,22 +1,9 @@
-/*! Neo's Normalize v1.0.9 : Neo (@Neos21) http://neo.s21.xrea.com/ */
+/*! Neo's Normalize v1.0.10 : Neo (@Neos21) http://neo.s21.xrea.com/ */
 
 
 /* ==================================================
  * ページ全体
  * ================================================== */
-
-/* Windows 用 Medium 指定の游ゴシック */
-@font-face {
-  font-family: "Yu Gothic M";
-  src: local("Yu Gothic Medium");
-}
-
-/* 太字の時は Bold 書体を使用する */
-@font-face {
-  font-family: "Yu Gothic M";
-  src: local("Yu Gothic Bold");
-  font-weight: bold;
-}
 
 /* 変数定義 */
 :root {
@@ -24,8 +11,8 @@
   --nn-grey-border: #d2d4d6;
   --nn-green-bg: #ddffee;
   --nn-green-border: #00ddaa;
-  --nn-sans-serif: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, YuGothic, "Yu Gothic M", "Yu Gothic Medium", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", Meiryo, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --nn-serif: Georgia, YuMincho, "Yu Mincho Medium", "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "HGS明朝E", serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --nn-sans-serif: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, YuGothic, "Yu Gothic", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", Meiryo, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --nn-serif: Georgia, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "HGS明朝E", serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --nn-monospace: MeiryoKe_Gothic, "Ricty Diminished", Osaka-mono, "MS Gothic", "Courier New", monospace, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
@@ -36,10 +23,10 @@
   box-sizing: border-box;
 }
 
-/* ページ全体のスタイル設定 */
+/* ページ全体のスタイルを設定する */
 html {
   /* var(--nn-sans-serif) */
-  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, YuGothic, "Yu Gothic M", "Yu Gothic Medium", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", Meiryo, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, YuGothic, "Yu Gothic", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", Meiryo, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   /* 常に縦スクロールバーを表示する */
   overflow-y: scroll;
   cursor: default;
@@ -62,7 +49,7 @@ body {
   word-wrap: break-word;
 }
 
-/* IE11 でブロック要素として扱われない要素を設定しておく */
+/* IE でブロック要素として扱われない要素を設定しておく */
 details, main {
   display: block;
 }
@@ -146,7 +133,7 @@ pre, code, kbd, samp, var, textarea {
   font-family: MeiryoKe_Gothic, "Ricty Diminished", Osaka-mono, "MS Gothic", "Courier New", monospace, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
-/* IE11 でフォントサイズが小さくなるのを直す */
+/* IE でフォントサイズが小さくなるのを直す */
 code, kbd, samp, var {
   font-size: 1em;
 }
@@ -159,6 +146,7 @@ button, input, optgroup, select {
   font-size: inherit;
 }
 
+/* テキストエリアはフォントサイズのみ親要素から継承させる */
 textarea {
   margin: 0;
   font-size: inherit;
@@ -296,7 +284,7 @@ q::after {
 }
 
 /* 隣接するテキストを上揃えにする */
-input, select, textarea {
+button, input, select, textarea {
   vertical-align: top;
 }
 
