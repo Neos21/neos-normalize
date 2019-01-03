@@ -1,4 +1,4 @@
-/*! Neo's Normalize v1.0.10 : Neo (@Neos21) http://neo.s21.xrea.com/ */
+/*! Neo's Normalize v1.0.11 : Neo (@Neos21) http://neo.s21.xrea.com/ */
 
 
 // ==================================================
@@ -14,7 +14,7 @@ $nn-green-border: #00ddaa !default;
 //  2. 英字   … Mac     iOS         … "Helvetica Neue",
 //  3. 英字   … Mac Win iOS Android … Helvetica, (= Arial on Windows, Roboto on Android)
 //  4. 和英   … Mac Win             … YuGothic, "Yu Gothic",
-//  5. 和英   … Mac     iOS         … "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro"
+//  5. 和英   … Mac     iOS         … "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro",
 //  6. 和英   …     Win             … Meiryo,
 //  7. 全般   …                     … sans-serif,
 //  8. 絵文字 … Mac     iOS         … "Apple Color Emoji",
@@ -25,16 +25,16 @@ $nn-sans-serif  : -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica
 //  1. 英字   … Mac Win iOS Android … Georgia, (= Noto Serif on Android)
 //  2. 和英   … Mac Win             … YuMincho, "Yu Mincho",
 //  3. 和英   … Mac     iOS         … "Hiragino Mincho ProN", "Hiragino Mincho Pro",
-//  4. 和英   …     Win             … "HGS明朝E"
-//  5. 全般   …                     … serif
+//  4. 和英   …     Win             … "HGS明朝E",
+//  5. 全般   …                     … serif,
 $nn-serif       : Georgia, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "HGS明朝E", serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
 // モノスペース (等幅)
 //  1. 和英   …     Win       [Mod] … MeiryoKe_Gothic,
 //  2. 和英   … Mac Win      [Open] … "Ricty Diminished",
 //  3. 和英   … Mac                 … Osaka-mono,
 //  4. 和英   …     Win             … "MS Gothic",
-//  7. 英字   … Mac Win iOS Android … "Courier New",
-// 10. 全般   …                     … monospace
+//  5. 英字   … Mac Win iOS Android … "Courier New",
+//  6. 全般   …                     … monospace,
 $nn-monospace   : MeiryoKe_Gothic, "Ricty Diminished", Osaka-mono, "MS Gothic", "Courier New", monospace, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
 
 
@@ -44,7 +44,7 @@ $nn-monospace   : MeiryoKe_Gothic, "Ricty Diminished", Osaka-mono, "MS Gothic", 
 
 /* 変数定義 */
 :root {
-  // SCSS 変数と同じ価にする
+  // SCSS 変数と同じ値にする
   --nn-grey-bg: #f2f4f6;
   --nn-grey-border: #d2d4d6;
   --nn-green-bg: #ddffee;
@@ -83,7 +83,7 @@ body {
   margin: 0;
   line-height: 1.7;
   overflow-wrap: break-word;
-  /* overflow-wrap が IE で効かないため指定する */
+  /* IE で overflow-wrap が効かないため指定する */
   word-wrap: break-word;
 }
 

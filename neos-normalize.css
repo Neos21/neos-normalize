@@ -1,4 +1,4 @@
-/*! Neo's Normalize v1.0.10 : Neo (@Neos21) http://neo.s21.xrea.com/ */
+/*! Neo's Normalize v1.0.11 : Neo (@Neos21) http://neo.s21.xrea.com/ */
 
 
 /* ==================================================
@@ -45,7 +45,7 @@ body {
   margin: 0;
   line-height: 1.7;
   overflow-wrap: break-word;
-  /* overflow-wrap が IE で効かないため指定する */
+  /* IE で overflow-wrap が効かないため指定する */
   word-wrap: break-word;
 }
 
