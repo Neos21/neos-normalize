@@ -16,12 +16,24 @@ Normalize.css・Bootstrap 4 Reboot の思想を基に、Windows・Mac・iOS の�
 __[Demo (GitHub Pages)](https://neos21.github.io/neos-normalize/)__
 
 
+## CDN
+
+- [jsDelivr](https://www.jsdelivr.com/package/npm/@neos21/neos-normalize)
+  - <https://cdn.jsdelivr.net/npm/@neos21/neos-normalize@1.0.13/neos-normalize.min.css>
+- [unpkg.org](https://unpkg.com/browse/@neos21/neos-normalize@1.0.13/)
+  - <https://unpkg.com/@neos21/neos-normalize@1.0.13/neos-normalize.min.css>
+- [GitHub Pages](https://neos21.github.io/neos-normalize/)
+  - <https://neos21.github.io/neos-normalize/neos-normalize.min.css>
+- [Raw GitHub](https://github.com/Neos21/neos-normalize)
+  - <https://raw.githubusercontent.com/Neos21/neos-normalize/master/neos-normalize.min.css>
+
+
 ## Author
 
 [Neo](http://neo.s21.xrea.com/) ([@Neos21](https://twitter.com/Neos21))
 
 - [GitHub - neos-normalize](https://github.com/Neos21/neos-normalize)
-- [GitHub Pages - neos-normalize](https://neos21.github.io/neos-normalize/)
+- [GitHub Pages - Neo's Normalize : @neos21/neos-normalize](https://neos21.github.io/neos-normalize/)
 - [npm - @neos21/neos-normalize](https://www.npmjs.com/package/@neos21/neos-normalize)
 
 
