@@ -1,4 +1,4 @@
-/*! Neo's Normalize v1.0.13 : Neo (@Neos21) http://neo.s21.xrea.com/ */
+/*! Neo's Normalize http://neo.s21.xrea.com/ */
 
 
 // ==================================================
@@ -7,35 +7,34 @@
 
 $nn-grey-bg     : #f2f4f6 !default;
 $nn-grey-border : #d2d4d6 !default;
-$nn-green-bg    : #ddffee !default;
-$nn-green-border: #00ddaa !default;
+$nn-green-bg    : #dfe !default;
+$nn-green-border: #0da !default;
 // サンセリフ (ゴシック体)
 //  1. 英字   … Mac     iOS         … -apple-system, BlinkMacSystemFont,
 //  2. 英字   … Mac     iOS         … "Helvetica Neue",
 //  3. 英字   … Mac Win iOS Android … Helvetica, (= Arial on Windows, Roboto on Android)
-//  4. 和英   … Mac Win             … YuGothic, "Yu Gothic",
-//  5. 和英   … Mac     iOS         … "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro",
+//  4. 和英   … Mac                 … YuGothic,
+//  5. 和英   … Mac     iOS         … "Hiragino Sans", "Hiragino Kaku Gothic ProN",
 //  6. 和英   …     Win             … Meiryo,
 //  7. 全般   …                     … sans-serif,
 //  8. 絵文字 … Mac     iOS         … "Apple Color Emoji",
 //  9. 絵文字 …     Win             … "Segoe UI Emoji", "Segoe UI Symbol",
 // 10. 絵文字 …             Android … "Noto Color Emoji"
-$nn-sans-serif  : -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, YuGothic, "Yu Gothic", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", Meiryo, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+$nn-sans-serif  : -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, YuGothic, "Hiragino Sans", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
 // セリフ (明朝体)
 //  1. 英字   … Mac Win iOS Android … Georgia, (= Noto Serif on Android)
 //  2. 和英   … Mac Win             … YuMincho, "Yu Mincho",
-//  3. 和英   … Mac     iOS         … "Hiragino Mincho ProN", "Hiragino Mincho Pro",
+//  3. 和英   … Mac     iOS         … "Hiragino Mincho ProN",
 //  4. 和英   …     Win             … "HGS明朝E",
-//  5. 全般   …                     … serif,
-$nn-serif       : Georgia, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "HGS明朝E", serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+//  5. 全般   …                     … serif
+$nn-serif       : Georgia, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "HGS明朝E", serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
 // モノスペース (等幅)
 //  1. 和英   …     Win       [Mod] … MeiryoKe_Gothic,
-//  2. 和英   … Mac Win      [Open] … "Ricty Diminished",
-//  3. 和英   … Mac                 … Osaka-mono,
-//  4. 和英   …     Win             … "MS Gothic",
-//  5. 英字   … Mac Win iOS Android … "Courier New",
-//  6. 全般   …                     … monospace,
-$nn-monospace   : MeiryoKe_Gothic, "Ricty Diminished", Osaka-mono, "MS Gothic", "Courier New", monospace, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+//  2. 和英   … Mac                 … Osaka-mono,
+//  3. 和英   …     Win             … "MS Gothic",
+//  4. 英字   … Mac Win iOS Android … "Courier New",
+//  5. 全般   …                     … monospace
+$nn-monospace   : MeiryoKe_Gothic, Osaka-mono, "MS Gothic", "Courier New", monospace, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
 
 
 /* ==================================================
@@ -47,11 +46,11 @@ $nn-monospace   : MeiryoKe_Gothic, "Ricty Diminished", Osaka-mono, "MS Gothic", 
   // SCSS 変数と同じ値にする
   --nn-grey-bg: #f2f4f6;
   --nn-grey-border: #d2d4d6;
-  --nn-green-bg: #ddffee;
-  --nn-green-border: #00ddaa;
-  --nn-sans-serif: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, YuGothic, "Yu Gothic", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", Meiryo, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --nn-serif: Georgia, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "HGS明朝E", serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --nn-monospace: MeiryoKe_Gothic, "Ricty Diminished", Osaka-mono, "MS Gothic", "Courier New", monospace, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --nn-green-bg: #dfe;
+  --nn-green-border: #0da;
+  --nn-sans-serif: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, YuGothic, "Hiragino Sans", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --nn-serif: Georgia, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "HGS明朝E", serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --nn-monospace: MeiryoKe_Gothic, Osaka-mono, "MS Gothic", "Courier New", monospace, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
 /* 全ての要素のボックスサイズの計算方法を border-box にする */
@@ -63,7 +62,6 @@ $nn-monospace   : MeiryoKe_Gothic, "Ricty Diminished", Osaka-mono, "MS Gothic", 
 
 /* ページ全体のスタイルを設定する */
 html {
-  /* var(--nn-sans-serif) */
   font-family: $nn-sans-serif;
   /* 常に縦スクロールバーを表示する */
   overflow-y: scroll;
@@ -98,11 +96,14 @@ details, main {
  * ================================================== */
 
 /* 上下のマージンを設定する */
-h1, h2, h3, h4, h5, h6, p, hr,
-dl, dt, dd, ol, ul,
-address, details, figcaption, fieldset, form, pre, summary, table {
-  margin-top: 0;
-  margin-bottom: 1rem;
+h1, h2, h3, h4, h5, h6, p, hr, dl, dt, dd, ol, ul,
+address, details, blockquote, figure, figcaption, fieldset, form, pre, summary, table {
+  margin: 0 0 1rem;
+}
+
+/* 左マージンを追加する */
+dd, li, blockquote, figure {
+  margin-left: 2.5em;
 }
 
 /* 下マージンをなくす : 入れ子のリスト・子要素のマージンと親要素のパディングとの衝突回避 */
@@ -112,16 +113,6 @@ blockquote > :last-child,
 fieldset > :last-child,
 pre > :last-child {
   margin-bottom: 0;
-}
-
-/* 左マージンを付ける */
-dd, li {
-  margin-left: 2.5em;
-}
-
-/* 引用ブロック・図表はまとめて調整する */
-blockquote, figure {
-  margin: 0 0 1rem 2.5em;
 }
 
 /* リストの左パディングをなくす */
@@ -151,7 +142,9 @@ h4 {
   font-size: 1.2em;
 }
 
-h5, h6 {
+/* 見出し5・6は通常サイズ・等幅フォントの要素は IE でフォントサイズが小さくなるのを直す */
+h5, h6,
+code, kbd, samp, var {
   font-size: 1em;
 }
 
@@ -167,13 +160,7 @@ address, dfn, em, var {
 
 /* 等幅フォントにする */
 pre, code, kbd, samp, var, textarea {
-  /* var(--nn-monospace) */
   font-family: $nn-monospace;
-}
-
-/* IE でフォントサイズが小さくなるのを直す */
-code, kbd, samp, var {
-  font-size: 1em;
 }
 
 /* フォーム部品のフォントは親要素から継承させる */
@@ -217,21 +204,17 @@ sup {
 
 /* 引用ブロック */
 blockquote {
-  /* var(--nn-green-border) */
   border: 1px solid $nn-green-border;
   border-radius: 4px;
   padding: 1em;
-  /* var(--nn-green-bg) */
   background: $nn-green-bg;
 }
 
 /* 等幅ブロック */
 pre {
-  /* var(--nn-grey-border) */
   border: 1px solid $nn-grey-border;
   border-radius: 4px;
   padding: 1em;
-  /* var(--nn-grey-bg) */
   background: $nn-grey-bg;
   overflow: auto;
   overflow-wrap: normal;
@@ -248,7 +231,6 @@ table {
 
 /* テーブルセル */
 td, th {
-  /* var(--nn-grey-border) */
   border: 1px solid $nn-grey-border;
   padding: .25em .5em;
 }
@@ -256,27 +238,23 @@ td, th {
 /* テーブル見出し */
 th {
   text-align: center;
-  /* var(--nn-grey-bg) */
   background: $nn-grey-bg;
 }
 
 /* 水平線 */
 hr {
   border: 0;
-  /* var(--nn-grey-border) */
   border-bottom: 1px solid $nn-grey-border;
 }
 
 /* フォームグループ */
 fieldset {
-  /* var(--nn-grey-border) */
   border: 1px solid $nn-grey-border;
   border-radius: 4px;
 }
 
 /* 図表 */
 figure {
-  /* var(--nn-grey-border) */
   border-left: .5em solid $nn-grey-border;
   padding-left: 1em;
 }
@@ -300,11 +278,9 @@ abbr[title], dfn[title] {
 :not(pre) > kbd,
 :not(pre) > var {
   margin: 0 .25em;
-  /* var(--nn-grey-border) */
   border: 1px solid $nn-grey-border;
   border-radius: 4px;
   padding: .1em .25em;
-  /* var(--nn-grey-bg) */
   background: $nn-grey-bg;
 }
 
