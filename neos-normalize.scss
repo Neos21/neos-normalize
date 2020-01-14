@@ -44,10 +44,6 @@ $nn-monospace   : MeiryoKe_Gothic, Osaka-mono, "MS Gothic", "Courier New", monos
 /* 変数定義 */
 :root {
   // SCSS 変数と同じ値にする
-  --nn-grey-bg: #f2f4f6;
-  --nn-grey-border: #d2d4d6;
-  --nn-green-bg: #dfe;
-  --nn-green-border: #0da;
   --nn-sans-serif: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, YuGothic, "Hiragino Sans", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --nn-serif: Georgia, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "HGS明朝E", serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --nn-monospace: MeiryoKe_Gothic, Osaka-mono, "MS Gothic", "Courier New", monospace, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
@@ -117,7 +113,7 @@ pre > :last-child {
 
 /* リストの左パディングをなくす */
 ol, ul {
-  padding-left: 0;
+  padding: 0;
 }
 
 
