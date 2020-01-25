@@ -30,7 +30,7 @@ __[Demo (GitHub Pages)](https://neos21.github.io/neos-normalize/)__
 
 ## Author
 
-[Neo](http://neo.s21.xrea.com/) ([@Neos21](https://twitter.com/Neos21))
+[Neo](http://neo.s21.xrea.com/)
 
 - [GitHub - neos-normalize](https://github.com/Neos21/neos-normalize)
 - [GitHub Pages - Neo's Normalize : @neos21/neos-normalize](https://neos21.github.io/neos-normalize/)
