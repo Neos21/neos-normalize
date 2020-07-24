@@ -27,7 +27,7 @@ jobs:
           NODE_AUTH_TOKEN: ${{ secrets.NODE_AUTH_TOKEN }}
       - name: Install
         run : npm install
-      - name: Build To dist/ Directory
+      - name: Build
         run : npm run build
       - name: Publish
         run : npm publish --access=public

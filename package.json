@@ -6,6 +6,7 @@
   "style": "neos-normalize.css",
   "sass": "neos-normalize.scss",
   "scripts": {
+    "build": "npm run transpile && npm run minify",
     "transpile": "node-sass --output-style=expanded neos-normalize.scss neos-normalize.css && node neos-beautify.js",
     "minify": "cleancss -o neos-normalize.min.css neos-normalize.css"
   },
@@ -24,7 +25,7 @@
     "url": "https://github.com/sponsors/Neos21"
   },
   "devDependencies": {
-    "clean-css-cli": "4.1.10",
-    "node-sass": "4.9.4"
+    "clean-css-cli": "4.3.0",
+    "node-sass": "4.14.1"
   }
 }
