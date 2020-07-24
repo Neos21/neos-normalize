@@ -19,9 +19,7 @@ __[Demo (GitHub Pages)](https://neos21.github.io/neos-normalize/)__
 ## CDN
 
 - [jsDelivr](https://www.jsdelivr.com/package/npm/@neos21/neos-normalize)
-  - <https://cdn.jsdelivr.net/npm/@neos21/neos-normalize@1.0.16/neos-normalize.min.css>
-- [unpkg.org](https://unpkg.com/browse/@neos21/neos-normalize@1.0.16/)
-  - <https://unpkg.com/@neos21/neos-normalize@1.0.16/neos-normalize.min.css>
+- unpkg.org : `https://unpkg.com/browse/@neos21/neos-normalize@【Latest Version】/`
 - [GitHub Pages](https://neos21.github.io/neos-normalize/)
   - <https://neos21.github.io/neos-normalize/neos-normalize.min.css>
 - [Raw GitHub](https://github.com/Neos21/neos-normalize)
