@@ -1,6 +1,6 @@
 # Neo's Normalize : @neos21/neos-normalize
 
-[![NPM Version](https://img.shields.io/npm/v/@neos21/neos-normalize.svg)](https://www.npmjs.com/package/@neos21/neos-normalize)
+[![NPM Version](https://img.shields.io/npm/v/@neos21/neos-normalize.svg)](https://www.npmjs.com/package/@neos21/neos-normalize) [![GPR Version](https://img.shields.io/github/package-json/v/neos21/neos-normalize?label=github)](https://github.com/Neos21/neos-normalize/packages/327574)
 
 Normalize.css・Bootstrap 4 Reboot の思想を基に、Windows・Mac・iOS の最新ブラウザで必要最小限のノーマライズスタイルを策定する。全ての要素に対するスタイリングを完璧に統一するのではなく、使用頻度の高い要素に限り最低限のスタイリングを行う。
 
@@ -19,9 +19,9 @@ __[Demo (GitHub Pages)](https://neos21.github.io/neos-normalize/)__
 ## CDN
 
 - [jsDelivr](https://www.jsdelivr.com/package/npm/@neos21/neos-normalize)
-  - <https://cdn.jsdelivr.net/npm/@neos21/neos-normalize@1.0.15/neos-normalize.min.css>
-- [unpkg.org](https://unpkg.com/browse/@neos21/neos-normalize@1.0.15/)
-  - <https://unpkg.com/@neos21/neos-normalize@1.0.15/neos-normalize.min.css>
+  - <https://cdn.jsdelivr.net/npm/@neos21/neos-normalize@1.0.16/neos-normalize.min.css>
+- [unpkg.org](https://unpkg.com/browse/@neos21/neos-normalize@1.0.16/)
+  - <https://unpkg.com/@neos21/neos-normalize@1.0.16/neos-normalize.min.css>
 - [GitHub Pages](https://neos21.github.io/neos-normalize/)
   - <https://neos21.github.io/neos-normalize/neos-normalize.min.css>
 - [Raw GitHub](https://github.com/Neos21/neos-normalize)

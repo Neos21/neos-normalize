@@ -5,3 +5,6 @@ Thumbs.db
 
 act/
 node_modules/
+
+# for .npmignore
+.github/workflows/
