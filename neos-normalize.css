@@ -1,32 +1,32 @@
 /*! Neo's Normalize http://neo.s21.xrea.com/ */
 
-/*
-- サンセリフ (ゴシック体)
-     1. 英字   … Mac     iOS         … -apple-system, BlinkMacSystemFont,
-     2. 英字   … Mac     iOS         … "Helvetica Neue",
-     3. 英字   … Mac Win iOS Android … Helvetica, (= Arial on Windows, Roboto on Android)
-     4. 和英   … Mac Win             … YuGothic, "Yu Gothic", (With @font-face)
-     5. 和英   … Mac Win     [Linux] … "Noto Sans JP", "Noto Sans CJK JP",
-     6. 和英   … Mac     iOS         … "Hiragino Sans", "Hiragino Kaku Gothic ProN",
-     7. 和英   …     Win             … Meiryo,
-     8. 全般   …                     … sans-serif,
-     9. 絵文字 … Mac     iOS         … "Apple Color Emoji",
-    10. 絵文字 …     Win             … "Segoe UI Emoji", "Segoe UI Symbol",
-    11. 絵文字 …             Android … "Noto Color Emoji"
-- セリフ (明朝体)
-     1. 英字   … Mac Win iOS Android … Georgia, (= Noto Serif on Android)
-     2. 和英   … Mac Win             … YuMincho, "Yu Mincho",
-     3. 和英   … Mac Win     [Linux] … "Noto Serif JP", "Noto Serif CJK JP", 
-     4. 和英   … Mac     iOS         … "Hiragino Mincho ProN",
-     5. 和英   …     Win             … "HGS明朝E",
-     6. 全般   …                     … serif
-- モノスペース (等幅)
-     1. 和英   …     Win       [Mod] … MeiryoKe_Gothic,
-     2. 和英   … Mac Win     [Linux] … "Noto Sans CJK JP",
-     3. 和英   … Mac                 … Osaka-mono,
-     4. 和英   …     Win             … "MS Gothic",
-     5. 英字   … Mac Win iOS Android … "Courier New",
-     6. 全般   …                     … monospace
+/* 
+ * - サンセリフ (ゴシック体)
+ *      1. 英字   … Mac     iOS         … -apple-system, BlinkMacSystemFont,
+ *      2. 英字   … Mac     iOS         … "Helvetica Neue",
+ *      3. 英字   … Mac Win iOS Android … Helvetica, (= Arial on Windows, Roboto on Android)
+ *      4. 和英   … Mac Win             … YuGothic, "Yu Gothic", (With @font-face)
+ *      5. 和英   … Mac Win     [Linux] … "Noto Sans JP", "Noto Sans CJK JP",
+ *      6. 和英   … Mac     iOS         … "Hiragino Sans", "Hiragino Kaku Gothic ProN",
+ *      7. 和英   …     Win             … Meiryo,
+ *      8. 全般   …                     … sans-serif,
+ *      9. 絵文字 … Mac     iOS         … "Apple Color Emoji",
+ *     10. 絵文字 …     Win             … "Segoe UI Emoji", "Segoe UI Symbol",
+ *     11. 絵文字 …             Android … "Noto Color Emoji"
+ * - セリフ (明朝体)
+ *      1. 英字   … Mac Win iOS Android … Georgia, (= Noto Serif on Android)
+ *      2. 和英   … Mac Win             … YuMincho, "Yu Mincho",
+ *      3. 和英   … Mac Win     [Linux] … "Noto Serif JP", "Noto Serif CJK JP", 
+ *      4. 和英   … Mac     iOS         … "Hiragino Mincho ProN",
+ *      5. 和英   …     Win             … "HGS明朝E",
+ *      6. 全般   …                     … serif
+ * - モノスペース (等幅)
+ *      1. 和英   …     Win       [Mod] … MeiryoKe_Gothic,
+ *      2. 和英   … Mac Win     [Linux] … "Noto Sans CJK JP",
+ *      3. 和英   … Mac                 … Osaka-mono,
+ *      4. 和英   …     Win             … "MS Gothic",
+ *      5. 英字   … Mac Win iOS Android … "Courier New",
+ *      6. 全般   …                     … monospace
  */
 
 /* Yu Gothic : Windows Full Name → Windows PostScript Name */
