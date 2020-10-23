@@ -68,9 +68,10 @@
   --nn-colour-em           : #229966;
   --nn-colour-strong       : #ff0033;
   --nn-colour-grey-default : #d6d8da;
+  --nn-colour-grey-lighter : #eef0f2;
   --nn-colour-grey-light   : #f6f8fa;
   --nn-colour-green-light  : #ddffee;
-  --nn-colour-green-default: #00ddaa;
+  --nn-colour-green-default: #66ddaa;
 }
 
 *,
@@ -294,31 +295,46 @@ abbr[title], dfn[title] {
   cursor: help;
 }
 
-/* フォーム部品のフォントは親要素から継承させる */
+/* 等幅フォントは別途指定済 */
+textarea {
+  margin: 0;
+  border: 1px solid var(--nn-colour-grey-default);
+  border-radius: var(--nn-border-radius-default);
+  padding: calc(var(--nn-space-tiny) / 2) var(--nn-space-tiny);
+  font-size: inherit;
+  background: transparent;
+  vertical-align: top;
+}
+
+/* フォントを親要素から継承させる */
 button, input, select {
   margin: 0;
   font-family: inherit;
   font-size: inherit;
-  /* 隣接するテキストを上揃えにする */
   vertical-align: top;
 }
 
-/* テキストエリアはフォントサイズのみ親要素から継承させる */
-textarea {
-  margin: 0;
-  font-size: inherit;
-  /* 隣接するテキストを上揃えにする */
-  vertical-align: top;
+button, [type="button"], [type="reset"], [type="submit"], [type="text"], [type="password"] {
+  /* iOS・Mac でのボタン類の表示仕様を揃える */
+  -webkit-appearance: none;
+  border: 1px solid var(--nn-colour-grey-default);
+  border-radius: var(--nn-border-radius-default);
+  padding: calc(var(--nn-space-tiny) / 2) var(--nn-space-tiny);
+  background: transparent;
+}
+
+button, [type="button"], [type="reset"], [type="submit"] {
+  background: var(--nn-colour-grey-light);
+  cursor: pointer;
+}
+
+button:hover, [type="button"]:hover, [type="reset"]:hover, [type="submit"]:hover,
+button:focus, [type="button"]:focus, [type="reset"]:focus, [type="submit"]:focus {
+  background: var(--nn-colour-grey-lighter);
 }
 
 /* チェックボックスとラジオボタンは隣接するテキストを垂直中央揃えにする */
 [type="checkbox"], [type="radio"] {
   vertical-align: middle;
-  cursor: pointer;
-}
-
-button, [type="button"], [type="reset"], [type="submit"] {
-  /* Mac でのボタン類の表示仕様を揃える */
-  -webkit-appearance: button;
   cursor: pointer;
 }
