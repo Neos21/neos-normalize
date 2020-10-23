@@ -2,9 +2,7 @@
 <html lang="ja">
   <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="robots" content="index, follow">
     <title>Neo's Normalize : @neos21/neos-normalize</title>
     <link rel="stylesheet" href="neos-normalize.css">
     <link rel="icon" href="/favicon.ico">
@@ -12,17 +10,16 @@
     <link rel="apple-touch-icon" href="/apple-touch-icon-152x152.png" sizes="152x152">
     <style>
 
-#header,
-#main,
-#footer {
-  margin: 2rem;
-  overflow-y: auto;
+body {
+  max-width: 50rem;
+  margin: 0 auto;
 }
 
 #header {
-  border-bottom: 1px solid #c7cbcf;
-  padding-bottom: 2rem;
-  font-size: 2em;
+  margin: var(--nn-space-large) 1rem 0;
+  border-bottom: 1px solid var(--nn-colour-grey-default);
+  padding-bottom: var(--nn-space-large);
+  font-size: 2rem;
   font-weight: bold;
   text-align: center;
 }
@@ -39,27 +36,33 @@
 #aside {
   position: fixed;
   top: 0;
-  right: 0;
+  right: calc(var(--nn-space-tiny) / 2);
+  margin: 0;
   text-align: right;
-  line-height: 1;
 }
 
 #aside input {
-  margin-bottom: 4px;
-  border: 1px solid #c7cbcf;
-  border-radius: 4px;
-  padding: 4px 8px;
-  font: 100%/1 monospace;
-  background: #fff;
+  margin-top: calc(var(--nn-space-tiny) / 2);
+  border: 1px solid var(--nn-colour-grey-default);
+  border-radius: var(--nn-border-radius);
+  padding: calc(var(--nn-space-tiny) / 3) calc(var(--nn-space-tiny) / 2);
+  font: 100%/1 var(--nn-font-family-monospace);
+  background: var(--nn-colour-background);
 }
 
-.nn-serif {
-  font-family: var(--nn-serif);
+#main {
+  margin: 0 1rem;
+  overflow-y: auto;
+}
+
+.font-family-serif {
+  font-family: var(--nn-font-family-serif);
 }
 
 #footer {
-  border-top: 1px solid #c7cbcf;
-  padding-top: 2rem;
+  margin: var(--nn-space-large) 1rem;
+  border-top: 1px solid var(--nn-colour-grey-default);
+  padding-top: var(--nn-space-large);
   text-align: center;
 }
 
@@ -67,26 +70,14 @@
     <script>
 
 document.addEventListener('DOMContentLoaded', function() {
-  const link = document.getElementsByTagName('link')[0];
-  const toggleBtn = document.getElementById('toggle');
+  const link = document.querySelector('link[rel="stylesheet"][href="neos-normalize.css"]');
   const switchBtn = document.getElementById('switch');
-  let isEnabled = true;
   let isBeautifyVer = true;
-  
-  // Neo's Normalize をページに適用させる・させないの切替
-  toggleBtn.addEventListener('click', function() {
-    link.href = isEnabled ? '' : isBeautifyVer ? 'neos-normalize.css' : 'neos-normalize.min.css';
-    isEnabled = !isEnabled;
-    toggleBtn.value = '[' + (isEnabled ? 'ON' : 'OFF') + '] Toggle Neo\'s Normalize';
-    switchBtn.value = (isEnabled ? ('[' + (isBeautifyVer ? 'Beautify' : 'Minify') + '] ') : '') + 'Switch Neo\'s Normalize';
-  });
   
   // 圧縮版と切り替えて差異が出ていないか検証する
   switchBtn.addEventListener('click', function() {
     link.href = isBeautifyVer ? 'neos-normalize.min.css' : 'neos-normalize.css';
-    isEnabled = true;
     isBeautifyVer = !isBeautifyVer;
-    toggleBtn.value = '[ON] Toggle Neo\'s Normalize';
     switchBtn.value = '[' + (isBeautifyVer ? 'Beautify' : 'Minify') + '] Switch Neo\'s Normalize';
   });
 });
@@ -98,21 +89,19 @@ document.addEventListener('DOMContentLoaded', function() {
       <a href="https://github.com/Neos21/neos-normalize">Neo's Normalize</a>
     </header>
     <aside id="aside">
-      <input type="button" id="toggle" value="[ON] Toggle Neo's Normalize"><br>
       <input type="button" id="switch" value="[Beautify] Switch Neo's Normalize">
     </aside>
     <main id="main">
       <section id="main-section">
         <h1>Neo's Normalize : @neos21/neos-normalize</h1>
-        <p>Normalize.css・Bootstrap 4 Reboot の思想を基に、Windows・Mac・iOS の最新ブラウザで必要最小限のノーマライズスタイルを策定する。全ての要素に対するスタイリングを完璧に統一するのではなく、使用頻度の高い要素に限り最低限のスタイリングを行う。</p>
+        <p>Normalize.css の思想を基に、Windows・Mac・iOS の最新ブラウザで必要最小限のノーマライズスタイルを策定する。全ての要素に対するスタイリングを完璧に統一するのではなく、使用頻度の高い要素に限り最低限のスタイリングを行う。</p>
         <p>
           <a href="https://www.npmjs.com/package/@neos21/neos-normalize"><img src="https://img.shields.io/npm/v/@neos21/neos-normalize.svg" alt="NPM Version" title="NPM Version"></a>
           <a href="https://github.com/Neos21/neos-normalize/packages/327574"><img src="https://img.shields.io/github/package-json/v/neos21/neos-normalize?label=github" alt="GPR Version" title="GPR Version"></a>
         </p>
         <ul>
-          <li><a href="neos-normalize.scss">neos-normalize.scss</a></li>
-          <li><a href="neos-normalize.css">neos-normalize.css</a> … <code>neos-normalize.scss</code> からトランスパイルしたもの</li>
-          <li><a href="neos-normalize.min.css">neos-normalize.min.css</a> … <code>neos-normalize.css</code> を Minify したもの</li>
+          <li><a href="neos-normalize.css">neos-normalize.css</a></li>
+          <li><a href="neos-normalize.min.css">neos-normalize.min.css</a></li>
         </ul>
         <p>本サンプルページはヘッダとフッタをスタイリングし、メイン部分に <code>margin</code> を設定している程度で、それ以外は Neo's Normalize が適用されている。</p>
         <p>CDN は以下。</p>
@@ -136,9 +125,8 @@ document.addEventListener('DOMContentLoaded', function() {
           <h2>検証ブラウザ</h2>
           <ul>
             <li>Chrome (Windows・MacOS)</li>
-            <li>Firefox Quantum (Windows・MacOS)</li>
+            <li>Firefox (Windows・MacOS)</li>
             <li>Chromium Edge (Windows・MacOS)</li>
-            <li>IE (Windows)</li>
             <li>Safari (MacOS・iOS)</li>
           </ul>
         </section>
@@ -164,8 +152,8 @@ document.addEventListener('DOMContentLoaded', function() {
             <h3>Section 3</h3>
             <p>Section 3 Paragraph.</p>
             <p>以下セリフ (明朝) 体。</p>
-            <p class="nn-serif"><b>Lorem ipsum</b> dolor sit amet, <i>consectetur adipiscing elit,</i> sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            <p class="nn-serif">lorem ipsum (ロレム・イプサム、略して<b>リプサム lipsum</b> ともいう) とは、<i>出版、ウェブデザイン、グラフィックデザインなどの諸分野</i>において使用されている典型的なダミーテキスト。書籍やウェブページや広告などのデザインのプロトタイプを制作したり顧客にプレゼンテーションしたりする際に、まだ正式な文章の出来上がっていないテキスト部分の書体 (フォント)、タイポグラフィ、レイアウトなどといった視覚的なデザインを調整したりわかりやすく見せるために用いられる。</p>
+            <p class="font-family-serif"><b>Lorem ipsum</b> dolor sit amet, <i>consectetur adipiscing elit,</i> sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p class="font-family-serif">lorem ipsum (ロレム・イプサム、略して<b>リプサム lipsum</b> ともいう) とは、<i>出版、ウェブデザイン、グラフィックデザインなどの諸分野</i>において使用されている典型的なダミーテキスト。書籍やウェブページや広告などのデザインのプロトタイプを制作したり顧客にプレゼンテーションしたりする際に、まだ正式な文章の出来上がっていないテキスト部分の書体 (フォント)、タイポグラフィ、レイアウトなどといった視覚的なデザインを調整したりわかりやすく見せるために用いられる。</p>
             <p>以上セリフ (明朝) 体。</p>
             <section>
               <h4>Section 4</h4>
@@ -198,6 +186,17 @@ document.addEventListener('DOMContentLoaded', function() {
             This is <ins>Inserted Text [pgq]</ins>.
             This is <q>Quote Text <q>Inline Quote Text</q> Quote Text</q>.
             This is <small>Small Text</small>.
+          </p>
+          <p>
+            This is <a href="#"><em>a &gt; em</em></a>.
+            This is <em><a href="#">em &gt; a</a></em>.
+            This is <a href="#"><strong>a &gt; strong</strong></a>.
+            This is <strong><a href="#">strong &gt; a</a></strong>.
+          </p>
+          <p>
+            This is <em><code>em &gt; code</code></em>.
+            This is <strong><code>strong &gt; code</code></strong>.
+            This is <a href="#"><code>a &gt; code</code></a>.
           </p>
           <p>
             This is <sub>Sub Text</sub>.
@@ -546,6 +545,22 @@ lorem ipsum (ロレム・イプサム、略して<b>リプサム lipsum</b> と�
                 <button type="submit">Submit</button>
               </p>
             </fieldset>
+            <p>
+              <input type="text" value="Text" placeholder="Placeholder">
+              <input type="password" value="Password" placeholder="Placeholder">
+              Text
+              <label>Label</label>
+            </p>
+            <p>
+              <input type="button" value="Button">
+              <button type="button">Button</button>
+              <input type="reset" value="Reset">
+              <button type="reset">Reset</button>
+              <input type="submit" value="Submit">
+              <button type="submit">Submit</button>
+              Text
+              <label>Label</label>
+            </p>
             <p>End of Form</p>
           </form>
           <p>End.</p>
