@@ -100,13 +100,22 @@ pre, code, kbd, samp, var, time, textarea {
   font-family: var(--nn-font-family-monospace);
 }
 
+header,
+main,
+section,
+article,
+aside,
+footer {
+  margin: var(--nn-space-large) 0;
+}
+
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  margin: calc(var(--nn-space-default) * 2) 0 var(--nn-space-default);
+  margin: var(--nn-space-large) 0 var(--nn-space-default);
 }
 
 h1 {
@@ -131,7 +140,8 @@ h6 {
 }
 
 p, dl, ol, ul,
-blockquote, pre, table, form, details, summary {
+blockquote, pre, table, form,
+details, summary, nav {
   margin: var(--nn-space-default) 0;
 }
 
@@ -244,7 +254,7 @@ code, kbd, samp, var {
   margin: 0 calc(var(--nn-space-tiny) / var(--nn-ratio-4));
   border: 1px solid var(--nn-colour-grey-default);
   border-radius: var(--nn-border-radius-default);
-  padding: calc(var(--nn-space-tiny) / 6) calc(var(--nn-space-tiny) / var(--nn-ratio-2));
+  padding: calc(var(--nn-space-tiny) / var(--nn-ratio-8)) calc(var(--nn-space-tiny) / var(--nn-ratio-2));
   font-size: .94em;
   background: var(--nn-colour-grey-light);
 }
@@ -254,13 +264,13 @@ table {
 }
 
 caption {
-  margin: 0 0 calc(var(--nn-space-tiny) / 2);
+  margin: 0 0 calc(var(--nn-space-tiny) / var(--nn-ratio-2));
   font-weight: bold;
 }
 
 th, td {
   border: 1px solid var(--nn-colour-grey-default);
-  padding: calc(var(--nn-space-tiny) / 2) var(--nn-space-tiny);
+  padding: calc(var(--nn-space-tiny) / var(--nn-ratio-2)) var(--nn-space-tiny);
 }
 
 th {
@@ -300,7 +310,7 @@ textarea {
   margin: 0;
   border: 1px solid var(--nn-colour-grey-default);
   border-radius: var(--nn-border-radius-default);
-  padding: calc(var(--nn-space-tiny) / 2) var(--nn-space-tiny);
+  padding: calc(var(--nn-space-tiny) / var(--nn-ratio-2)) var(--nn-space-tiny);
   font-size: inherit;
   background: transparent;
   vertical-align: top;
@@ -319,7 +329,7 @@ button, [type="button"], [type="reset"], [type="submit"], [type="text"], [type="
   -webkit-appearance: none;
   border: 1px solid var(--nn-colour-grey-default);
   border-radius: var(--nn-border-radius-default);
-  padding: calc(var(--nn-space-tiny) / 2) var(--nn-space-tiny);
+  padding: calc(var(--nn-space-tiny) / var(--nn-ratio-2)) var(--nn-space-tiny);
   background: transparent;
 }
 
