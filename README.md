@@ -2,13 +2,10 @@
 
 [![NPM Version](https://img.shields.io/npm/v/@neos21/neos-normalize.svg)](https://www.npmjs.com/package/@neos21/neos-normalize) [![GPR Version](https://img.shields.io/github/package-json/v/neos21/neos-normalize?label=github)](https://github.com/Neos21/neos-normalize/packages/327574)
 
-Normalize.css・Bootstrap 4 Reboot の思想を基に、Windows・Mac・iOS の最新ブラウザで必要最小限のノーマライズスタイルを策定する。全ての要素に対するスタイリングを完璧に統一するのではなく、使用頻度の高い要素に限り最低限のスタイリングを行う。
+Normalize.css の思想を基に、Windows・Mac・iOS の最新ブラウザで必要最小限のノーマライズスタイルを策定する。全ての要素に対するスタイリングを完璧に統一するのではなく、使用頻度の高い要素に限り最低限のスタイリングを行う。
 
-- [neos-normalize.scss](https://neos21.github.io/neos-normalize/neos-normalize.scss)
 - [neos-normalize.css](https://neos21.github.io/neos-normalize/neos-normalize.css)
-  - `neos-normalize.scss` からトランスパイルしたもの
 - [neos-normalize.min.css](https://neos21.github.io/neos-normalize/neos-normalize.min.css)
-  - `neos-normalize.css` を Minify したもの
 
 
 ## Demo
