@@ -42,10 +42,10 @@
 }
 
 :root {
-	--nn-ratio-1: 1.3;
-	--nn-ratio-2: calc(var(--nn-ratio-1) * var(--nn-ratio-1));
-	--nn-ratio-4: calc(var(--nn-ratio-2) * var(--nn-ratio-2));
-	--nn-ratio-8: calc(var(--nn-ratio-4) * var(--nn-ratio-4));
+  --nn-ratio-1: 1.3;
+  --nn-ratio-2: calc(var(--nn-ratio-1) * var(--nn-ratio-1));
+  --nn-ratio-4: calc(var(--nn-ratio-2) * var(--nn-ratio-2));
+  --nn-ratio-8: calc(var(--nn-ratio-4) * var(--nn-ratio-4));
   
   --nn-space-default: calc(1rem * var(--nn-ratio-2));
   --nn-space-small  : calc(var(--nn-space-default) / var(--nn-ratio-2));
@@ -70,8 +70,8 @@
   --nn-colour-grey-default : #caccce;
   --nn-colour-grey-lighter : #eef0f2;
   --nn-colour-grey-light   : #f6f8fa;
-  --nn-colour-green-light  : #ddffee;
   --nn-colour-green-default: #66ddaa;
+  --nn-colour-green-light  : #ddffee;
 }
 
 *,
