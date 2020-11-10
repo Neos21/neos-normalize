@@ -1,4 +1,4 @@
-/*! Neo's Normalize http://neo.s21.xrea.com/ */
+/*! Neo's Normalize https://neos21.net/ */
 
 /* 
  * - サンセリフ (ゴシック体)
@@ -21,12 +21,13 @@
  *      5. 和英   …     Win             … "HGS明朝E",
  *      6. 全般   …                     … serif
  * - モノスペース (等幅)
- *      1. 和英   …     Win       [Mod] … MeiryoKe_Gothic,
- *      2. 和英   … Mac Win     [Linux] … "Noto Sans CJK JP",
- *      3. 和英   … Mac                 … Osaka-mono,
- *      4. 和英   …     Win             … "MS Gothic",
- *      5. 英字   … Mac Win iOS Android … "Courier New",
- *      6. 全般   …                     … monospace
+ *      1. 和英   … Mac Win     [Linux] … "Noto Sans CJK JP",
+ *      2. 和英   … Mac                 … Osaka-mono,
+ *      3. 和英   …     Win             … "MS Gothic",
+ *      4. 英字   … Mac     iOS         … Menlo,
+ *      5. 英字   …     Win             … Consolas,
+ *      6. 英字   … Mac Win iOS Android … Courier, "Courier New",
+ *      7. 全般   …                     … monospace
  */
 
 /* Yu Gothic : Windows Full Name → Windows PostScript Name */
@@ -53,10 +54,10 @@
   --nn-space-tiny   : calc(var(--nn-space-small) / var(--nn-ratio-2));
   --nn-space-huge   : calc(var(--nn-space-large) * var(--nn-ratio-4));
   
-  --nn-space-indent-default: calc(2rem * var(--nn-ratio-1));
+  --nn-space-indent-default: 1.85rem;
   
   --nn-font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, YuGothic, "Yu Gothic", "Noto Sans JP", "Noto Sans CJK JP", "Hiragino Sans", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --nn-font-family-monospace: MeiryoKe_Gothic, "Noto Sans Mono CJK JP", Osaka-mono, "MS Gothic", "Courier New", monospace, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --nn-font-family-monospace: "Noto Sans Mono CJK JP", Osaka-mono, "MS Gothic", Menlo, Consolas, Courier, "Courier New", monospace, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --nn-font-family-serif: Georgia, YuMincho, "Yu Mincho", "Noto Serif JP", "Noto Serif CJK JP", "Hiragino Mincho ProN", "HGS明朝E", serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   
   --nn-border-radius-default: 4px;
@@ -96,7 +97,7 @@ body {
   margin: 0;
 }
 
-pre, code, kbd, samp, var, time, textarea {
+pre, code, time, textarea {
   font-family: var(--nn-font-family-monospace);
 }
 
@@ -221,7 +222,7 @@ a:hover strong, a:active strong, strong a:hover, strong a:active {
   color: var(--nn-colour-link-base);
 }
 
-address, var {
+address {
   font-style: normal;
 }
 
@@ -243,14 +244,11 @@ pre {
   white-space: pre;
 }
 
-code, kbd, samp, var {
+code {
   font-size: 1em;
 }
 
-:not(pre) > code,
-:not(pre) > samp,
-:not(pre) > kbd,
-:not(pre) > var {
+:not(pre) > code {
   margin: 0 calc(var(--nn-space-tiny) / var(--nn-ratio-4));
   border: 1px solid var(--nn-colour-grey-default);
   border-radius: var(--nn-border-radius-default);

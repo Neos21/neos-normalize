@@ -1,13 +1,13 @@
 {
   "name": "@neos21/neos-normalize",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Neo's Normalize",
   "main": "neos-normalize.min.css",
   "style": "neos-normalize.css",
   "scripts": {
     "build": "cleancss -o neos-normalize.min.css neos-normalize.css"
   },
-  "author": "Neo <neos21@gmail.com> (http://neo.s21.xrea.com/)",
+  "author": "Neo <neos21@gmail.com> (https://neos21.net/)",
   "license": "MIT",
   "homepage": "https://github.com/Neos21/neos-normalize#readme",
   "repository": {
