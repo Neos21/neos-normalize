@@ -36,5 +36,4 @@ __[Demo (GitHub Pages)](https://neos21.github.io/neos-normalize/)__
 
 - [Neo's World](https://neos21.net/)
 - [Neo's GitHub Pages](https://neos21.github.io/)
-- [Corredor](https://neos21.hatenablog.com/)
 - [GitHub - Neos21](https://github.com/Neos21/)
