@@ -74,13 +74,13 @@ body {
     </style>
     <script>
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', () => {
   const link = document.querySelector('link[rel="stylesheet"][href="neos-normalize.css"]');
   const switchBtn = document.getElementById('switch');
   let isBeautifyVer = true;
   
   // 圧縮版と切り替えて差異が出ていないか検証する
-  switchBtn.addEventListener('click', function() {
+  switchBtn.addEventListener('click', () => {
     link.href = isBeautifyVer ? 'neos-normalize.min.css' : 'neos-normalize.css';
     isBeautifyVer = !isBeautifyVer;
     switchBtn.value = '[' + (isBeautifyVer ? 'Beautify' : 'Minify') + '] Switch Neo\'s Normalize';
@@ -151,14 +151,14 @@ document.addEventListener('DOMContentLoaded', function() {
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
           <p>lorem ipsum (ロレム・イプサム、略してリプサム lipsum ともいう) とは、出版、ウェブデザイン、グラフィックデザインなどの諸分野において使用されている典型的なダミーテキスト。書籍やウェブページや広告などのデザインのプロトタイプを制作したり顧客にプレゼンテーションしたりする際に、まだ正式な文章の出来上がっていないテキスト部分の書体 (フォント)、タイポグラフィ、レイアウトなどといった視覚的なデザインを調整したりわかりやすく見せるために用いられる。</p>
           <p>http://www.toolongtexttoolongtexttoolongtexttoolongtexttoolongtexttoolongtexttoolongtexttoolongtexttoolongtexttoolongtexttoolongtexttoolongtexttoolongtexttoolongtexttoolongtexttoolongtexttoolongtexttoolongtexttoolongtexttoolongtext.com/</p>
-          <p><b>Lorem ipsum</b> dolor sit amet, <i>consectetur adipiscing elit,</i> sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          <p>lorem ipsum (ロレム・イプサム、略して<b>リプサム lipsum</b> ともいう) とは、<i>出版、ウェブデザイン、グラフィックデザインなどの諸分野</i>において使用されている典型的なダミーテキスト。書籍やウェブページや広告などのデザインのプロトタイプを制作したり顧客にプレゼンテーションしたりする際に、まだ正式な文章の出来上がっていないテキスト部分の書体 (フォント)、タイポグラフィ、レイアウトなどといった視覚的なデザインを調整したりわかりやすく見せるために用いられる。</p>
+          <p><span style="font-weight: bold;">Lorem ipsum</span> dolor sit amet, <span style="font-style: italic;">consectetur adipiscing elit,</span> sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <p>lorem ipsum (ロレム・イプサム、略して<span style="font-weight: bold;">リプサム lipsum</span> ともいう) とは、<span style="font-style: italic;">出版、ウェブデザイン、グラフィックデザインなどの諸分野</span>において使用されている典型的なダミーテキスト。書籍やウェブページや広告などのデザインのプロトタイプを制作したり顧客にプレゼンテーションしたりする際に、まだ正式な文章の出来上がっていないテキスト部分の書体 (フォント)、タイポグラフィ、レイアウトなどといった視覚的なデザインを調整したりわかりやすく見せるために用いられる。</p>
           <section>
             <h3>Section 3</h3>
             <p>Section 3 Paragraph.</p>
             <p>以下セリフ (明朝) 体。</p>
-            <p class="font-family-serif"><b>Lorem ipsum</b> dolor sit amet, <i>consectetur adipiscing elit,</i> sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            <p class="font-family-serif">lorem ipsum (ロレム・イプサム、略して<b>リプサム lipsum</b> ともいう) とは、<i>出版、ウェブデザイン、グラフィックデザインなどの諸分野</i>において使用されている典型的なダミーテキスト。書籍やウェブページや広告などのデザインのプロトタイプを制作したり顧客にプレゼンテーションしたりする際に、まだ正式な文章の出来上がっていないテキスト部分の書体 (フォント)、タイポグラフィ、レイアウトなどといった視覚的なデザインを調整したりわかりやすく見せるために用いられる。</p>
+            <p class="font-family-serif"><span style="font-weight: bold;">Lorem ipsum</span> dolor sit amet, <span style="font-style: italic;">consectetur adipiscing elit,</span> sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p class="font-family-serif">lorem ipsum (ロレム・イプサム、略して<span style="font-weight: bold;">リプサム lipsum</span> ともいう) とは、<span style="font-style: italic;">出版、ウェブデザイン、グラフィックデザインなどの諸分野</span>において使用されている典型的なダミーテキスト。書籍やウェブページや広告などのデザインのプロトタイプを制作したり顧客にプレゼンテーションしたりする際に、まだ正式な文章の出来上がっていないテキスト部分の書体 (フォント)、タイポグラフィ、レイアウトなどといった視覚的なデザインを調整したりわかりやすく見せるために用いられる。</p>
             <p>以上セリフ (明朝) 体。</p>
             <section>
               <h4>Section 4</h4>
@@ -181,55 +181,112 @@ document.addEventListener('DOMContentLoaded', function() {
         <section id="inline">
           <h2>Inline Elements</h2>
           <p>[pgq] : for text-decoration</p>
-          <p>
-            This is <a href="#">Anchor Text [pgq]</a>.
-            This is <em>Emphasis Text</em>.
-            This is <strong>Strong Text</strong>.
-            This is <dfn title="Definition">Definition Text [pgq]</dfn>.
-            This is <abbr title="Abbr">Abbr Text [pgq]</abbr>.
-            This is <del>Deleted Text</del>.
-            This is <ins>Inserted Text [pgq]</ins>.
-            This is <q>Quote Text <q>Inline Quote Text</q> Quote Text</q>.
-            This is <small>Small Text</small>.
-          </p>
-          <p>
-            This is <a href="#"><em>a &gt; em</em></a>.
-            This is <em><a href="#">em &gt; a</a></em>.
-            This is <a href="#"><strong>a &gt; strong</strong></a>.
-            This is <strong><a href="#">strong &gt; a</a></strong>.
-          </p>
-          <p>
-            This is <em><code>em &gt; code</code></em>.
-            This is <strong><code>strong &gt; code</code></strong>.
-            This is <a href="#"><code>a &gt; code</code></a>.
-          </p>
-          <p>
-            This is <sub>Sub Text</sub>.
-            This is <sup>Sup Text</sup>.
-          </p>
-          <p>
-            This is <b>Bold Text</b>.
-            This is <i>Italic Text</i>.
-            This is <u>Underline Text [pgq]</u>.
-            This is <s>Strike Text</s>.
-            This is <mark>Marked Text</mark>.
-          </p>
-          <p>
-            This is <code>Code Text</code>.
-            This is <var>Variable Text</var>.
-            This is <samp>Sample Text</samp>.
-            This is <kbd>Keyboard Text</kbd>.
-          </p>
-          <p>
-            This is Time : <time>2018-01-23</time>.
-          </p>
-          <p>
-            This is Ruby :
-            <ruby>
-              漢<rp>(</rp><rt>かん</rt><rp>)</rp>
-              字<rp>(</rp><rt>じ</rt><rp>)</rp>
-            </ruby>
-          </p>
+          <ul>
+            <li><a href="#">Anchor Text [pgq]</a></li>
+            <li>
+              <em>Emphasis Text</em>
+              <ul>
+                <li><em><a href="#">em &gt; a</a></em></li>
+                <li><a href="#"><em>a &gt; em</em></a></li>
+              </ul>
+            </li>
+            <li>
+              <strong>Strong Text</strong>
+              <ul>
+                <li><strong><a href="#">strong &gt; a</a></strong></li>
+                <li><a href="#"><strong>a &gt; strong</strong></a></li>
+              </ul>
+            </li>
+            <li>
+              <b>Bold Text</b>
+              <ul>
+                <li><b><a href="#">b &gt; a</a></b></li>
+                <li><a href="#"><b>a &gt; b</b></a></li>
+              </ul>
+            </li>
+            <li>
+              <i>Italic Text</i>
+              <ul>
+                <li><i><a href="#">i &gt; a</a></i></li>
+                <li><a href="#"><i>a &gt; i</i></a></li>
+              </ul>
+            </li>
+            <li>
+              <u>Underline Text [pgq]</u>
+              <ul>
+                <li><u><a href="#">u &gt; a</a></u></li>
+                <li><a href="#"><u>a &gt; u</u></a></li>
+              </ul>
+            </li>
+            <li>
+              <s>Strike Text</s>
+              <ul>
+                <li><s><a href="#">s &gt; a</a></s></li>
+                <li><a href="#"><s>a &gt; s</s></a></li>
+              </ul>
+            </li>
+            <li>
+              <code>Code Text [pgq]</code>
+              <ul>
+                <li><code><em>code &gt; em</em></code></li>
+                <li><em><code>em &gt; code</code></em></li>
+                <li><code><strong>code &gt; strong</strong></code></li>
+                <li><strong><code>strong &gt; code</code></strong></li>
+                <li><code><a href="#">code &gt; a</a></code></li>
+                <li><a href="#"><code>a &gt; code</code></a></li>
+              </ul>
+            </li>
+            <li>
+              <kbd>Keyboard Text [pgq]</kbd>
+              <ul>
+                <li><kbd><em>kbd &gt; em</em></kbd></li>
+                <li><em><kbd>em &gt; kbd</kbd></em></li>
+                <li><kbd><strong>kbd &gt; strong</strong></kbd></li>
+                <li><strong><kbd>strong &gt; kbd</kbd></strong></li>
+                <li><kbd><a href="#">kbd &gt; a</a></kbd></li>
+                <li><a href="#"><kbd>a &gt; kbd</kbd></a></li>
+              </ul>
+            </li>
+            <li>
+              <samp>Sample Text [pgq]</samp>
+              <ul>
+                <li><samp><em>samp &gt; em</em></samp></li>
+                <li><em><samp>em &gt; samp</samp></em></li>
+                <li><samp><strong>samp &gt; strong</strong></samp></li>
+                <li><strong><samp>strong &gt; samp</samp></strong></li>
+                <li><samp><a href="#">samp &gt; a</a></samp></li>
+                <li><a href="#"><samp>a &gt; samp</samp></a></li>
+              </ul>
+            </li>
+            <li>
+              <var>Variable Text [pgq]</var>
+              <ul>
+                <li><var><em>var &gt; em</em></var></li>
+                <li><em><var>em &gt; var</var></em></li>
+                <li><var><strong>var &gt; strong</strong></var></li>
+                <li><strong><var>strong &gt; var</var></strong></li>
+                <li><var><a href="#">var &gt; a</a></var></li>
+                <li><a href="#"><var>a &gt; var</var></a></li>
+              </ul>
+            </li>
+            <li><dfn title="Definition">Definition Text [pgq]</dfn></li>
+            <li><abbr title="Abbr">Abbr Text [pgq]</abbr></li>
+            <li><del>Deleted <a href="#">Link</a> Text [pgq]</del></li>
+            <li><ins>Inserted <a href="#">Link</a> Text [pgq]</ins></li>
+            <li><q>Quote Text <q>Inline Quote Text</q> Quote Text</q></li>
+            <li><small>Small Text</small></li>
+            <li><sub>Sub Text</sub></li>
+            <li><sup>Sup Text</sup></li>
+            <li><mark>Marked Text</mark></li>
+            <li>Time : <time>2018-01-23</time></li>
+            <li>
+              Ruby :
+              <ruby>
+                漢<rp>(</rp><rt>かん</rt><rp>)</rp>
+                字<rp>(</rp><rt>じ</rt><rp>)</rp>
+              </ruby>
+            </li>
+          </ul>
           <p><img src="https://dummyimage.com/100x100/f09/fff.png"> Image</p>
           <p><a href="#"><img src="https://dummyimage.com/100x100/f09/fff.png"></a> Image in Link</p>
           <p>
@@ -249,9 +306,9 @@ document.addEventListener('DOMContentLoaded', function() {
           <p>Paragraph</p>
           <pre>Pre</pre>
           <pre>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-<b>Lorem ipsum</b> dolor sit amet, <i>consectetur adipiscing elit,</i> sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+<span style="font-weight: bold;">Lorem ipsum</span> dolor sit amet, <span style="font-style: italic;">consectetur adipiscing elit,</span> sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 lorem ipsum (ロレム・イプサム、略してリプサム lipsum ともいう) とは、出版、ウェブデザイン、グラフィックデザインなどの諸分野において使用されている典型的なダミーテキスト。書籍やウェブページや広告などのデザインのプロトタイプを制作したり顧客にプレゼンテーションしたりする際に、まだ正式な文章の出来上がっていないテキスト部分の書体 (フォント)、タイポグラフィ、レイアウトなどといった視覚的なデザインを調整したりわかりやすく見せるために用いられる。
-lorem ipsum (ロレム・イプサム、略して<b>リプサム lipsum</b> ともいう) とは、<i>出版、ウェブデザイン、グラフィックデザインなどの諸分野</i>において使用されている典型的なダミーテキスト。書籍やウェブページや広告などのデザインのプロトタイプを制作したり顧客にプレゼンテーションしたりする際に、まだ正式な文章の出来上がっていないテキスト部分の書体 (フォント)、タイポグラフィ、レイアウトなどといった視覚的なデザインを調整したりわかりやすく見せるために用いられる。</pre>
+lorem ipsum (ロレム・イプサム、略して<span style="font-weight: bold;">リプサム lipsum</span> ともいう) とは、<span style="font-style: italic;">出版、ウェブデザイン、グラフィックデザインなどの諸分野</span>において使用されている典型的なダミーテキスト。書籍やウェブページや広告などのデザインのプロトタイプを制作したり顧客にプレゼンテーションしたりする際に、まだ正式な文章の出来上がっていないテキスト部分の書体 (フォント)、タイポグラフィ、レイアウトなどといった視覚的なデザインを調整したりわかりやすく見せるために用いられる。</pre>
           <pre><code>Pre Code</code></pre>
           <blockquote>
             <p>Blockquote</p>
@@ -583,7 +640,7 @@ lorem ipsum (ロレム・イプサム、略して<b>リプサム lipsum</b> と�
       </section>
     </main>
     <footer id="footer">
-      <small>Copyright &copy; 2018-2020 <a href="https://neos21.net/">Neo</a>, All rights reserved.</small>
+      <small>Copyright &copy; 2018-2021 <a href="https://neos21.net/">Neo</a>, All rights reserved.</small>
     </footer>
   </body>
 </html>

@@ -62,17 +62,32 @@
   
   --nn-border-radius-default: 4px;
   
-  --nn-colour-base         : #323436;
-  --nn-colour-background   : #fdfeff;
-  --nn-colour-link-base    : #0070ff;
-  --nn-colour-link-hover   : #ff0033;
-  --nn-colour-em           : #229966;
-  --nn-colour-strong       : #ff0033;
-  --nn-colour-grey-default : #caccce;
-  --nn-colour-grey-lighter : #eef0f2;
-  --nn-colour-grey-light   : #f6f8fa;
-  --nn-colour-green-default: #66ddaa;
-  --nn-colour-green-light  : #ddffee;
+  --nn-colour-grey-100 : #f6f7f8;
+  --nn-colour-grey-200 : #e9ecef;
+  --nn-colour-grey-300 : #dee2e6;
+  --nn-colour-grey-400 : #ced4da;
+  --nn-colour-grey-500 : #adb5bd;
+  --nn-colour-grey-600 : #6c757d;
+  --nn-colour-grey-700 : #495057;
+  --nn-colour-grey-800 : #343a40;
+  --nn-colour-grey-900 : #212529;
+  --nn-colour-black    : #000000;
+  --nn-colour-grey     : #808080;
+  --nn-colour-white    : #ffffff;
+  --nn-colour-blue     : #0060f3;
+  --nn-colour-purple   : #6610f3;
+  --nn-colour-pink     : #ff0077;
+  --nn-colour-red      : #f60010;
+  --nn-colour-orange   : #fd6f00;
+  --nn-colour-yellow   : #f9b300;
+  --nn-colour-green    : #008840;
+  --nn-colour-teal     : #009070;
+  --nn-colour-cyan     : #00a0b9;
+  
+  --nn-colour-base      : #000102;
+  --nn-colour-background: #fdfeff;
+  --nn-colour-blockquote-border    : #66ddaa;
+  --nn-colour-blockquote-background: #ddffee;
 }
 
 *,
@@ -84,7 +99,7 @@
 html {
   color: var(--nn-colour-base);
   font-family: var(--nn-font-family-sans-serif);
-  overflow-y: scroll;
+  overflow: hidden scroll;
   overflow-wrap: break-word;
   text-decoration-skip-ink: none;
   -webkit-text-decoration-skip: objects;
@@ -97,8 +112,9 @@ body {
   margin: 0;
 }
 
-pre, code, time, textarea {
+pre, code, kbd, samp, var, time, textarea {
   font-family: var(--nn-font-family-monospace);
+  font-style: normal;
 }
 
 header,
@@ -120,21 +136,18 @@ h6 {
 }
 
 h1 {
-  font-size: 2rem;
-}
-
-h2 {
   font-size: 1.7rem;
 }
 
-h3 {
+h2 {
   font-size: 1.5rem;
 }
 
-h4 {
-  font-size: 1.2rem;
+h3 {
+  font-size: 1.3rem;
 }
 
+h4,
 h5,
 h6 {
   font-size: 1rem;
@@ -178,83 +191,26 @@ blockquote > :last-child {
   margin-bottom: 0;
 }
 
-hr {
-  margin: var(--nn-space-large) 0;
-  border: 0;
-  border-bottom: 1px solid var(--nn-colour-grey-default);
-}
-
-a {
-  color: var(--nn-colour-link-base);
-  text-decoration: underline;
-}
-
-a:hover,
-a:active {
-  color: var(--nn-colour-link-hover);
-}
-
-em {
-  color: var(--nn-colour-em);
-  font-style: normal;
-  font-weight: bold;
-}
-
-a em, em a {
-  color: var(--nn-colour-em);
-  text-decoration: underline;
-}
-
-a:hover em, a:active em, em a:hover, em a:active {
-  color: var(--nn-colour-link-hover);
-}
-
-strong {
-  color: var(--nn-colour-strong);
-}
-
-a strong, strong a {
-  color: var(--nn-colour-strong);
-  text-decoration: underline;
-}
-
-a:hover strong, a:active strong, strong a:hover, strong a:active {
-  color: var(--nn-colour-link-base);
-}
-
 address {
   font-style: normal;
 }
 
 blockquote {
-  border: 1px solid var(--nn-colour-green-default);
+  border: 1px solid var(--nn-colour-blockquote-border);
   border-radius: var(--nn-border-radius-default);
   padding: var(--nn-space-default) var(--nn-space-small);
-  background: var(--nn-colour-green-light);
+  background: var(--nn-colour-blockquote-background);
 }
 
 pre {
-  border: 1px solid var(--nn-colour-grey-default);
+  border: 1px solid var(--nn-colour-grey-400);
   border-radius: var(--nn-border-radius-default);
   padding: var(--nn-space-small);
-  background: var(--nn-colour-grey-light);
+  background: var(--nn-colour-grey-100);
   overflow: auto;
   overflow-wrap: normal;
   word-break: keep-all;
   white-space: pre;
-}
-
-code {
-  font-size: 1em;
-}
-
-:not(pre) > code {
-  margin: 0 calc(var(--nn-space-tiny) / var(--nn-ratio-4));
-  border: 1px solid var(--nn-colour-grey-default);
-  border-radius: var(--nn-border-radius-default);
-  padding: calc(var(--nn-space-tiny) / var(--nn-ratio-8)) calc(var(--nn-space-tiny) / var(--nn-ratio-2));
-  font-size: .94em;
-  background: var(--nn-colour-grey-light);
 }
 
 table {
@@ -267,18 +223,159 @@ caption {
 }
 
 th, td {
-  border: 1px solid var(--nn-colour-grey-default);
+  border: 1px solid var(--nn-colour-grey-400);
   padding: calc(var(--nn-space-tiny) / var(--nn-ratio-2)) var(--nn-space-tiny);
 }
 
 th {
   font-weight: bold;
   text-align: center;
-  background: var(--nn-colour-grey-light);
+  background: var(--nn-colour-grey-100);
 }
 
 td {
   vertical-align: top;
+}
+
+summary {
+  cursor: pointer;
+}
+
+summary:hover {
+  color: var(--nn-colour-pink);
+}
+
+hr {
+  margin: var(--nn-space-large) 0;
+  border: 0;
+  border-bottom: 1px solid var(--nn-colour-grey-400);
+}
+
+a,
+:not(pre) a code,
+:not(pre) a kbd,
+:not(pre) a samp,
+:not(pre) a var {
+  color: var(--nn-colour-blue);
+  text-decoration: underline;
+}
+
+a * {
+  text-decoration: underline;
+}
+
+a:hover,
+a:active,
+a:hover *,
+a:active * {
+  color: var(--nn-colour-pink);
+}
+
+em,
+em *,
+:not(pre) em code,
+:not(pre) em kbd,
+:not(pre) em samp,
+:not(pre) em var {
+  color: var(--nn-colour-green);
+  font-style: normal;
+  font-weight: bold;
+}
+
+strong,
+strong *,
+:not(pre) strong code,
+:not(pre) strong kbd,
+:not(pre) strong samp,
+:not(pre) strong var {
+  color: var(--nn-colour-red);
+}
+
+b,
+b *,
+:not(pre) b code,
+:not(pre) b kbd,
+:not(pre) b samp,
+:not(pre) b var {
+  color: var(--nn-colour-yellow);
+}
+
+i,
+i *,
+:not(pre) i code,
+:not(pre) i kbd,
+:not(pre) i samp,
+:not(pre) i var {
+  color: var(--nn-colour-teal);
+  font-weight: bold;
+  font-style: normal;
+}
+
+u,
+u *,
+:not(pre) u code,
+:not(pre) u kbd,
+:not(pre) u samp,
+:not(pre) u var {
+  color: var(--nn-colour-cyan);
+  font-weight: bold;
+}
+
+s,
+s *,
+:not(pre) s code,
+:not(pre) s kbd,
+:not(pre) s samp,
+:not(pre) s var {
+  color: var(--nn-colour-purple);
+  font-weight: bold;
+}
+
+code, kbd, samp, var {
+  font-size: 1em;
+}
+
+:not(pre) > code,
+:not(pre) > kbd,
+:not(pre) > samp,
+:not(pre) > var {
+  margin: 0 calc(var(--nn-space-tiny) / var(--nn-ratio-4));
+  border: 1px solid var(--nn-colour-grey-400);
+  border-radius: var(--nn-border-radius-default);
+  padding: calc(var(--nn-space-tiny) / var(--nn-ratio-8)) calc(var(--nn-space-tiny) / var(--nn-ratio-2));
+  font-size: .94em;
+  background: var(--nn-colour-grey-100);
+}
+
+:not(pre) > code,
+:not(pre) > code :hover,
+:not(pre) > code:hover {
+  color: var(--nn-colour-pink);
+}
+
+:not(pre) > kbd,
+:not(pre) > kbd :hover,
+:not(pre) > kbd:hover {
+  color: var(--nn-colour-orange);
+}
+
+:not(pre) > samp,
+:not(pre) > samp :hover,
+:not(pre) > samp:hover {
+  color: var(--nn-colour-purple);
+}
+
+:not(pre) > var,
+:not(pre) > var :hover,
+:not(pre) > var:hover {
+  color: var(--nn-colour-cyan);
+}
+
+q,
+q::before,
+q::after {
+  color: var(--nn-colour-green);
+  text-decoration: underline dotted;
 }
 
 q {
@@ -293,10 +390,6 @@ q::after {
   content: close-quote;
 }
 
-summary {
-  cursor: pointer;
-}
-
 abbr[title], dfn[title] {
   font-style: normal;
   text-decoration: underline dotted;
@@ -306,7 +399,7 @@ abbr[title], dfn[title] {
 /* 等幅フォントは別途指定済 */
 textarea {
   margin: 0;
-  border: 1px solid var(--nn-colour-grey-default);
+  border: 1px solid var(--nn-colour-grey-400);
   border-radius: var(--nn-border-radius-default);
   padding: calc(var(--nn-space-tiny) / var(--nn-ratio-2)) var(--nn-space-tiny);
   font-size: inherit;
@@ -325,20 +418,23 @@ button, input, select {
 button, [type="button"], [type="reset"], [type="submit"], [type="text"], [type="password"] {
   /* iOS・Mac でのボタン類の表示仕様を揃える */
   -webkit-appearance: none;
-  border: 1px solid var(--nn-colour-grey-default);
+  border: 1px solid var(--nn-colour-grey-400);
   border-radius: var(--nn-border-radius-default);
   padding: calc(var(--nn-space-tiny) / var(--nn-ratio-2)) var(--nn-space-tiny);
   background: transparent;
 }
 
 button, [type="button"], [type="reset"], [type="submit"] {
-  background: var(--nn-colour-grey-light);
+  background: var(--nn-colour-grey-100);
   cursor: pointer;
 }
 
-button:hover, [type="button"]:hover, [type="reset"]:hover, [type="submit"]:hover,
+button:hover, [type="button"]:hover, [type="reset"]:hover, [type="submit"]:hover {
+  background: var(--nn-colour-grey-200);
+}
+
 button:focus, [type="button"]:focus, [type="reset"]:focus, [type="submit"]:focus {
-  background: var(--nn-colour-grey-lighter);
+  background: var(--nn-colour-grey-300);
 }
 
 /* チェックボックスとラジオボタンは隣接するテキストを垂直中央揃えにする */
