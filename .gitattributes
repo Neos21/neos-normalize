@@ -1,0 +1,2 @@
+# 言語判定から HTML を除外する
+*.html linguist-detectable=false
