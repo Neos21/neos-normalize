@@ -79,10 +79,10 @@
   --nn-colour-pink     : #ff0077;
   --nn-colour-red      : #f60010;
   --nn-colour-orange   : #fd6f00;
-  --nn-colour-yellow   : #f9b300;
+  --nn-colour-yellow   : #f6a300;
   --nn-colour-green    : #008840;
-  --nn-colour-teal     : #009070;
-  --nn-colour-cyan     : #00a0b9;
+  --nn-colour-teal     : #009088;
+  --nn-colour-cyan     : #00d0f0;
   
   --nn-colour-base      : #000102;
   --nn-colour-background: #fdfeff;
@@ -170,7 +170,6 @@ dd ol, dd ul {
 ol ol, ol ul,
 ul ol, ul ul {
   margin: 0;
-  padding-left: var(--nn-space-default);
 }
 
 dt {
@@ -206,6 +205,8 @@ pre {
   border: 1px solid var(--nn-colour-grey-400);
   border-radius: var(--nn-border-radius-default);
   padding: var(--nn-space-small);
+  font-size: 1em;
+  line-height: 1.5;
   background: var(--nn-colour-grey-100);
   overflow: auto;
   overflow-wrap: normal;
@@ -235,6 +236,7 @@ th {
 
 td {
   vertical-align: top;
+  background: var(--nn-colour-white);
 }
 
 summary {
@@ -380,6 +382,7 @@ q::after {
 
 q {
   quotes: "“" "”" "‘" "’";
+  cursor: help;
 }
 
 q::before {
@@ -410,6 +413,7 @@ textarea {
 /* フォントを親要素から継承させる */
 button, input, select {
   margin: 0;
+  color: inherit;
   font-family: inherit;
   font-size: inherit;
   vertical-align: top;
@@ -425,6 +429,7 @@ button, [type="button"], [type="reset"], [type="submit"], [type="text"], [type="
 }
 
 button, [type="button"], [type="reset"], [type="submit"] {
+  font-weight: normal;  /* For iOS Submit */
   background: var(--nn-colour-grey-100);
   cursor: pointer;
 }
@@ -441,4 +446,20 @@ button:focus, [type="button"]:focus, [type="reset"]:focus, [type="submit"]:focus
 [type="checkbox"], [type="radio"] {
   vertical-align: middle;
   cursor: pointer;
+}
+
+[type="text"], [type="password"], textarea, select,
+[type="search"], [type="tel"], [type="url"], [type="email"], [type="datetime"], [type="date"], [type="month"], [type="week"], [type="time"], [type="datetime-local"], [type="number"] {
+  background: var(--nn-colour-white);
+}
+
+select,
+[type="search"], [type="tel"], [type="url"], [type="email"], [type="datetime"], [type="date"], [type="month"], [type="week"], [type="time"], [type="datetime-local"], [type="number"] {
+  border: 1px solid var(--nn-colour-grey-400);
+  border-radius: var(--nn-border-radius-default);
+}
+
+/* For iOS Safari File Upload Buton */
+::-webkit-file-upload-button {
+  color: inherit;
 }
