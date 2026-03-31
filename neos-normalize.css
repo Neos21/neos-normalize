@@ -1,18 +1,17 @@
-/*! Neo's Normalize https://neos21.net/ */
+/*! Neo's Normalize https://neos21.net */
 
 /* 
  * - サンセリフ (ゴシック体)
  *      1. 英字   … Mac     iOS         … -apple-system, BlinkMacSystemFont,
  *      2. 英字   … Mac     iOS         … "Helvetica Neue",
- *      3. 英字   … Mac Win iOS Android … Helvetica, (= Arial on Windows, Roboto on Android)
- *      4. 和英   … Mac Win             … YuGothic, "Yu Gothic", (With @font-face)
+ *      3. 英字   … Mac Win iOS Android … Helvetica, Arial,
+ *      4. 和英   … Mac     iOS         … "Hiragino Sans", "Hiragino Kaku Gothic ProN",
  *      5. 和英   … Mac Win     [Linux] … "Noto Sans JP", "Noto Sans CJK JP",
- *      6. 和英   … Mac     iOS         … "Hiragino Sans", "Hiragino Kaku Gothic ProN",
- *      7. 和英   …     Win             … Meiryo,
- *      8. 全般   …                     … sans-serif,
- *      9. 絵文字 … Mac     iOS         … "Apple Color Emoji",
- *     10. 絵文字 …     Win             … "Segoe UI Emoji", "Segoe UI Symbol",
- *     11. 絵文字 …             Android … "Noto Color Emoji"
+ *      6. 和英   …     Win             … Meiryo,
+ *      7. 全般   …                     … sans-serif,
+ *      8. 絵文字 … Mac     iOS         … "Apple Color Emoji",
+ *      9. 絵文字 …     Win             … "Segoe UI Emoji", "Segoe UI Symbol",
+ *     10. 絵文字 …             Android … "Noto Color Emoji"
  * - セリフ (明朝体)
  *      1. 英字   … Mac Win iOS Android … Georgia, (= Noto Serif on Android)
  *      2. 和英   … Mac Win             … YuMincho, "Yu Mincho",
@@ -43,7 +42,7 @@
 }
 
 :root {
-  --nn-ratio-1: 1.3;
+  --nn-ratio-1: 1.35;
   --nn-ratio-2: calc(var(--nn-ratio-1) * var(--nn-ratio-1));
   --nn-ratio-4: calc(var(--nn-ratio-2) * var(--nn-ratio-2));
   --nn-ratio-8: calc(var(--nn-ratio-4) * var(--nn-ratio-4));
@@ -56,38 +55,80 @@
   
   --nn-space-indent-default: 1.85rem;
   
-  --nn-font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, YuGothic, "Yu Gothic", "Noto Sans JP", "Noto Sans CJK JP", "Hiragino Sans", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --nn-font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP", "Noto Sans CJK JP", Meiryo, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --nn-font-family-monospace: "Noto Sans Mono CJK JP", Osaka-mono, "MS Gothic", Menlo, Consolas, Courier, "Courier New", monospace, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --nn-font-family-serif: Georgia, YuMincho, "Yu Mincho", "Noto Serif JP", "Noto Serif CJK JP", "Hiragino Mincho ProN", "HGS明朝E", serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   
   --nn-border-radius-default: 4px;
   
-  --nn-colour-grey-100 : #f6f7f8;
-  --nn-colour-grey-200 : #e9ecef;
-  --nn-colour-grey-300 : #dee2e6;
-  --nn-colour-grey-400 : #ced4da;
-  --nn-colour-grey-500 : #adb5bd;
-  --nn-colour-grey-600 : #6c757d;
-  --nn-colour-grey-700 : #495057;
-  --nn-colour-grey-800 : #343a40;
-  --nn-colour-grey-900 : #212529;
-  --nn-colour-black    : #000000;
-  --nn-colour-grey     : #808080;
-  --nn-colour-white    : #ffffff;
-  --nn-colour-blue     : #0070ff;
-  --nn-colour-purple   : #6610f3;
-  --nn-colour-pink     : #ff0099;
-  --nn-colour-red      : #f60010;
-  --nn-colour-orange   : #fd6f00;
-  --nn-colour-yellow   : #f6a300;
-  --nn-colour-green    : #009940;
-  --nn-colour-teal     : #009088;
-  --nn-colour-cyan     : #00d0f0;
-  
-  --nn-colour-base      : #000102;
-  --nn-colour-background: #fdfeff;
+  --nn-font-size-small: .86rem;
+}
+:root, :root[data-theme="light"] {
+  --nn-colour-grey-100             : #f6f7f8;
+  --nn-colour-grey-200             : #e9ecef;
+  --nn-colour-grey-300             : #dee2e6;
+  --nn-colour-grey-400             : #ced4da;
+  --nn-colour-grey-500             : #adb5bd;
+  --nn-colour-grey-600             : #6c757d;
+  --nn-colour-grey-700             : #495057;
+  --nn-colour-grey-800             : #343a40;
+  --nn-colour-grey-900             : #212529;
+  --nn-colour-black                : #000000;
+  --nn-colour-grey                 : #808080;
+  --nn-colour-white                : #ffffff;
+  --nn-colour-blue                 : #0070ff;
+  --nn-colour-purple               : #6610f3;
+  --nn-colour-pink                 : #ff0099;
+  --nn-colour-red                  : #f90010;
+  --nn-colour-orange               : #fd6f00;
+  --nn-colour-yellow               : #f6a300;
+  --nn-colour-green                : #009940;
+  --nn-colour-teal                 : #009088;
+  --nn-colour-cyan                 : #00d0f0;
+  --nn-colour-base                 : #222324;
+  --nn-colour-background           : #ffffff;
   --nn-colour-blockquote-border    : #66ddaa;
   --nn-colour-blockquote-background: #ddffee;
+  --nn-colour-pre-background               : var(--nn-colour-grey-100);
+  --nn-colour-th-background                : var(--nn-colour-grey-100);
+  --nn-colour-td-background                : var(--nn-colour-white);
+  --nn-colour-code-span-border             : var(--nn-colour-grey-400);
+  --nn-colour-code-span-background         : var(--nn-colour-grey-100);
+  --nn-colour-form-control-background      : var(--nn-colour-grey-100);
+  --nn-colour-form-control-background-hover: var(--nn-colour-grey-200);
+  --nn-colour-form-control-background-focus: var(--nn-colour-grey-300);
+}
+:root[data-theme="dark"] {
+  --nn-colour-blue                 : #40a6ff;
+  --nn-colour-green                : #00bb50;
+  --nn-colour-base                 : #ffffff;
+  --nn-colour-background           : #001020;
+  --nn-colour-blockquote-background: #003c10;
+  --nn-colour-pre-background               : var(--nn-colour-black);
+  --nn-colour-th-background                : var(--nn-colour-black);
+  --nn-colour-td-background                : var(--nn-colour-grey-800);
+  --nn-colour-code-span-border             : var(--nn-colour-grey-600);
+  --nn-colour-code-span-background         : var(--nn-colour-grey-800);
+  --nn-colour-form-control-background      : var(--nn-colour-grey-800);
+  --nn-colour-form-control-background-hover: var(--nn-colour-grey-700);
+  --nn-colour-form-control-background-focus: var(--nn-colour-grey-600);
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --nn-colour-blue                 : #40a6ff;
+    --nn-colour-green                : #00bb50;
+    --nn-colour-base                 : #ffffff;
+    --nn-colour-background           : #001020;
+    --nn-colour-blockquote-background: #003c10;
+    --nn-colour-pre-background               : var(--nn-colour-black);
+    --nn-colour-th-background                : var(--nn-colour-black);
+    --nn-colour-td-background                : var(--nn-colour-grey-800);
+    --nn-colour-code-span-border             : var(--nn-colour-grey-600);
+    --nn-colour-code-span-background         : var(--nn-colour-grey-800);
+    --nn-colour-form-control-background      : var(--nn-colour-grey-800);
+    --nn-colour-form-control-background-hover: var(--nn-colour-grey-700);
+    --nn-colour-form-control-background-focus: var(--nn-colour-grey-600);
+  }
 }
 
 *,
@@ -97,16 +138,24 @@
 }
 
 html {
+  overflow: hidden scroll;
   color: var(--nn-colour-base);
   font-family: var(--nn-font-family-sans-serif);
-  overflow: hidden scroll;
-  overflow-wrap: break-word;
   text-decoration-skip-ink: none;
+  text-underline-offset: .1em;
   -webkit-text-decoration-skip: objects;
-  line-height: 1.7;
+  -webkit-text-size-adjust: 100%;
+  overflow-wrap: break-word;
+  line-height: 1.75;
   background: var(--nn-colour-background);
   cursor: default;
+  scrollbar-gutter: stable;
 }
+  @media (max-width: 600px) {
+    html {
+      word-break: break-all;
+    }
+  }
 
 body {
   margin: 0;
@@ -126,32 +175,13 @@ footer {
   margin: var(--nn-space-large) 0;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6 {
   margin: var(--nn-space-large) 0 var(--nn-space-default);
 }
-
-h1 {
-  font-size: 1.7rem;
-}
-
-h2 {
-  font-size: 1.5rem;
-}
-
-h3 {
-  font-size: 1.3rem;
-}
-
-h4,
-h5,
-h6 {
-  font-size: 1rem;
-}
+h1         { font-size: 1.7rem; }
+h2         { font-size: 1.5rem; }
+h3         { font-size: 1.3rem; }
+h4, h5, h6 { font-size: 1.1rem; }
 
 p, dl, ol, ul,
 blockquote, pre, table, form,
@@ -181,7 +211,7 @@ dd {
   margin: 0 0 0 var(--nn-space-indent-default);
 }
 
-dd > :first-child,
+dd         > :first-child,
 blockquote > :first-child {
   margin-top: 0;
 }
@@ -207,7 +237,7 @@ pre {
   padding: var(--nn-space-small);
   font-size: 1em;
   line-height: 1.5;
-  background: var(--nn-colour-grey-100);
+  background: var(--nn-colour-pre-background);
   overflow: auto;
   overflow-wrap: normal;
   word-break: keep-all;
@@ -231,21 +261,21 @@ th, td {
 th {
   font-weight: bold;
   text-align: center;
-  background: var(--nn-colour-grey-100);
+  background: var(--nn-colour-th-background);
 }
 
 td {
   vertical-align: top;
-  background: var(--nn-colour-white);
+  background: var(--nn-colour-td-background);
 }
 
 summary {
+  font-weight: bold;
   cursor: pointer;
 }
-
-summary:hover {
-  color: var(--nn-colour-pink);
-}
+  summary:hover {
+    color: var(--nn-colour-pink);
+  }
 
 hr {
   margin: var(--nn-space-large) 0;
@@ -261,17 +291,15 @@ a,
   color: var(--nn-colour-blue);
   text-decoration: underline;
 }
-
-a * {
-  text-decoration: underline;
-}
-
-a:hover,
-a:active,
-a:hover *,
-a:active * {
-  color: var(--nn-colour-pink);
-}
+  a * {
+    text-decoration: underline;
+  }
+  a:hover,
+  a:active,
+  a:hover *,
+  a:active * {
+    color: var(--nn-colour-pink);
+  }
 
 em,
 em *,
@@ -342,11 +370,11 @@ code, kbd, samp, var {
 :not(pre) > samp,
 :not(pre) > var {
   margin: 0 calc(var(--nn-space-tiny) / var(--nn-ratio-4));
-  border: 1px solid var(--nn-colour-grey-400);
+  border: 1px solid var(--nn-colour-code-span-border);
   border-radius: var(--nn-border-radius-default);
   padding: calc(var(--nn-space-tiny) / var(--nn-ratio-8)) calc(var(--nn-space-tiny) / var(--nn-ratio-2));
   font-size: .94em;
-  background: var(--nn-colour-grey-100);
+  background: var(--nn-colour-code-span-background);
 }
 
 :not(pre) > code,
@@ -373,30 +401,30 @@ code, kbd, samp, var {
   color: var(--nn-colour-cyan);
 }
 
-q,
-q::before,
-q::after {
+q, q::before, q::after {
   color: var(--nn-colour-green);
   text-decoration: underline dotted;
 }
-
 q {
   quotes: "“" "”" "‘" "’";
   cursor: help;
 }
-
-q::before {
-  content: open-quote;
-}
-
-q::after {
-  content: close-quote;
-}
+  q::before { content: open-quote; }
+  q::after  { content: close-quote; }
 
 abbr[title], dfn[title] {
   font-style: normal;
+  font-weight: bold;
   text-decoration: underline dotted;
   cursor: help;
+}
+  abbr[title]::after, dfn[title]::after {
+    content: " (" attr(title) ") ";
+    font-size: var(--nn-font-size-small);
+  }
+
+img[height] {
+  height: auto;
 }
 
 /* 等幅フォントは別途指定済 */
@@ -405,8 +433,8 @@ textarea {
   border: 1px solid var(--nn-colour-grey-400);
   border-radius: var(--nn-border-radius-default);
   padding: calc(var(--nn-space-tiny) / var(--nn-ratio-2)) var(--nn-space-tiny);
+  color: inherit;
   font-size: inherit;
-  background: transparent;
   vertical-align: top;
 }
 
@@ -425,21 +453,11 @@ button, [type="button"], [type="reset"], [type="submit"], [type="text"], [type="
   border: 1px solid var(--nn-colour-grey-400);
   border-radius: var(--nn-border-radius-default);
   padding: calc(var(--nn-space-tiny) / var(--nn-ratio-2)) var(--nn-space-tiny);
-  background: transparent;
 }
 
 button, [type="button"], [type="reset"], [type="submit"] {
   font-weight: normal;  /* For iOS Submit */
-  background: var(--nn-colour-grey-100);
   cursor: pointer;
-}
-
-button:hover, [type="button"]:hover, [type="reset"]:hover, [type="submit"]:hover {
-  background: var(--nn-colour-grey-200);
-}
-
-button:focus, [type="button"]:focus, [type="reset"]:focus, [type="submit"]:focus {
-  background: var(--nn-colour-grey-300);
 }
 
 /* チェックボックスとラジオボタンは隣接するテキストを垂直中央揃えにする */
@@ -447,19 +465,69 @@ button:focus, [type="button"]:focus, [type="reset"]:focus, [type="submit"]:focus
   vertical-align: middle;
   cursor: pointer;
 }
-
-[type="text"], [type="password"], textarea, select,
-[type="search"], [type="tel"], [type="url"], [type="email"], [type="datetime"], [type="date"], [type="month"], [type="week"], [type="time"], [type="datetime-local"], [type="number"] {
-  background: var(--nn-colour-white);
-}
-
 select,
 [type="search"], [type="tel"], [type="url"], [type="email"], [type="datetime"], [type="date"], [type="month"], [type="week"], [type="time"], [type="datetime-local"], [type="number"] {
   border: 1px solid var(--nn-colour-grey-400);
   border-radius: var(--nn-border-radius-default);
 }
 
-/* For iOS Safari File Upload Buton */
-::-webkit-file-upload-button {
-  color: inherit;
+button, [type="button"], [type="reset"], [type="submit"],
+[type="text"], [type="password"], textarea, select,
+[type="search"], [type="tel"], [type="url"], [type="email"], [type="datetime"], [type="date"], [type="month"], [type="week"], [type="time"], [type="datetime-local"], [type="number"] {
+  background: var(--nn-colour-form-control-background);
+}
+button:hover, [type="button"]:hover, [type="reset"]:hover, [type="submit"]:hover {
+  background: var(--nn-colour-form-control-background-hover);
+}
+button:focus, [type="button"]:focus, [type="reset"]:focus, [type="submit"]:focus {
+  background: var(--nn-colour-form-control-background-focus);
+}
+
+::file-selector-button       { border: 1px solid var(--nn-colour-grey-400); border-radius: var(--nn-border-radius-default); color: inherit; background: var(--nn-colour-form-control-background); cursor: pointer; }
+::-webkit-file-upload-button { border: 1px solid var(--nn-colour-grey-400); border-radius: var(--nn-border-radius-default); color: inherit; background: var(--nn-colour-form-control-background); cursor: pointer; }  /* For iOS Safari File Upload Buton */
+::file-selector-button:hover       { background: var(--nn-colour-form-control-background-hover); }
+::-webkit-file-upload-button:hover { background: var(--nn-colour-form-control-background-hover); }
+::file-selector-button:focus       { background: var(--nn-colour-form-control-background-focus); }
+::-webkit-file-upload-button:focus { background: var(--nn-colour-form-control-background-focus); }
+
+/* Utilities */
+
+.min-width-full { min-width: 100%; }
+
+.font-size-small { font-size: var(--nn-font-size-small); }
+
+.font-family-sans-serif { font-family: var(--nn-font-family-sans-serif); }
+.font-family-monospace  { font-family: var(--nn-font-family-monospace) ; }
+.font-family-serif      { font-family: var(--nn-font-family-serif)     ; }
+
+.font-bold   { font-weight: bold; }
+.font-italic { font-style: italic; }
+
+.text-left   { text-align: left  ; }
+.text-center { text-align: center; }
+.text-right  { text-align: right ; }
+
+.white-space-nowrap   { white-space: nowrap  ; }
+.white-space-pre-wrap { white-space: pre-wrap; }
+
+/* Utility Components */
+
+.table-wrapper {  /* テーブルを横スクロール可能にするラッパー・div 要素 */
+  overflow-x: auto;
+}
+  .table-wrapper > table {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .table-wrapper.min-width-full > table {
+    min-width: 100%;
+  }
+
+.note {
+  font-size: var(--nn-font-size-small);
+}
+
+.help {
+  text-decoration: underline dotted var(--nn-colour-grey-500);
+  cursor: help;
 }

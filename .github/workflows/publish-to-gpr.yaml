@@ -13,7 +13,7 @@ jobs:
       - name: Use Node.js And Setup .npmrc
         uses: actions/setup-node@v1
         with:
-          node-version: '12.x'
+          node-version: 'latest'
           registry-url: 'https://npm.pkg.github.com'
           scope       : '@neos21'
           always-auth : true
