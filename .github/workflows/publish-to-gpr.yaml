@@ -7,6 +7,9 @@ on:
 jobs:
   publish-to-gpr:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write  # For Publish
     steps:
       - name: Checkout
         uses: actions/checkout@v6
@@ -15,14 +18,7 @@ jobs:
         with:
           node-version: latest
           registry-url: 'https://npm.pkg.github.com'
-          scope       : '@neos21'
-          always-auth : true
-        env :
-          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - name: Can npm Publish
-        run : |
-          npm install can-npm-publish
-          npx can-npm-publish --verbose
+          scope: '@neos21'
         env :
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Install
